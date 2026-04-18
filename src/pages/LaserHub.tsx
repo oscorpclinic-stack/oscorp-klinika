@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function LaserHub() {
   const { t } = useTranslation();
@@ -29,6 +30,11 @@ export default function LaserHub() {
 
   return (
     <>
+      <SEO 
+        title={t('seo.laserHub.title')} 
+        description={t('seo.laserHub.desc')} 
+        canonical="/laser-hub" 
+      />
       <main className="pt-16 lg:pt-44">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-10">

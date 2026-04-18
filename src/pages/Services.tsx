@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function Services() {
   const { t } = useTranslation();
@@ -29,6 +30,11 @@ export default function Services() {
 
   return (
     <>
+      <SEO 
+        title={t('seo.services.title')} 
+        description={t('seo.services.desc')} 
+        canonical="/services" 
+      />
       <main className="pt-16 lg:pt-48 pb-24 overflow-hidden">
         {/* Hero Section: Editorial Header */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-16 md:mb-32">

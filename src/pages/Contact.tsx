@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CustomSelect from '../components/CustomSelect';
+import SEO from '../components/SEO';
 
 import { supabase } from '../lib/supabase';
 
@@ -91,6 +92,11 @@ export default function Contact() {
 
   return (
     <>
+      <SEO 
+        title={t('seo.contact.title')} 
+        description={t('seo.contact.desc')} 
+        canonical="/contact" 
+      />
       <main className="pt-16 lg:pt-48 pb-24 overflow-hidden">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">

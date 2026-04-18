@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Innovation() {
   const { t } = useTranslation();
@@ -29,6 +30,11 @@ export default function Innovation() {
 
   return (
     <>
+      <SEO 
+        title={t('seo.innovation.title')} 
+        description={t('seo.innovation.desc')} 
+        canonical="/innovation" 
+      />
       <main className="pt-16 lg:pt-44">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32">

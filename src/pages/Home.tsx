@@ -1,9 +1,30 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const { t } = useTranslation();
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "OSCORP Klinika",
+    "image": "https://oscorp.az/logo.png",
+    "url": "https://oscorp.az",
+    "telephone": "+994000000000",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Baku",
+      "addressCountry": "AZ"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  };
 
   const containerVariants: any = {
     hidden: { opacity: 0, y: 30 },
@@ -29,6 +50,14 @@ export default function Home() {
 
   return (
     <>
+      <SEO 
+        title={t('seo.home.title')} 
+        description={t('seo.home.desc')} 
+        canonical="/" 
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(jsonLd)}
+      </script>
       <main className="pt-16 lg:pt-0">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden">

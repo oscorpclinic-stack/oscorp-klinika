@@ -13,6 +13,13 @@ const resources = {
         bookConsultation: "Book Consultation",
         home: "Home"
       },
+      seo: {
+        home: { title: "Elite Precision Dentistry & Laser Hub", desc: "OSCORP Klinika in Baku - The sanctuary of high-precision dentistry, laser hair removal, and digital innovation. Crafted smiles, confident you." },
+        services: { title: "Dental & Aesthetic Procedures", desc: "Explore our elite clinical services: implants, digital smile design, and advanced restorative dentistry." },
+        laserHub: { title: "Advanced Laser Sanctuary | Candela Pro-U", desc: "The gold standard in dermatological laser technology. Painless laser hair removal and skin rejuvenation in Baku." },
+        innovation: { title: "Digital Lab & Clinical Innovation", desc: "In-house digital dentistry laboratory. 3D mapping and CAD/CAM robotics for same-day restorations." },
+        contact: { title: "Book Your Consultation", desc: "Start your smile journey at OSCORP. Contact our patient concierge for precise diagnostics and personalized care." }
+      },
       footer: {
         description: "A premium sanctuary dedicated to the intersection of oral health and technological precision.",
         sanctuary: "Sanctuary",
@@ -239,6 +246,13 @@ const resources = {
         bookConsultation: "Записаться",
         home: "Главная"
       },
+      seo: {
+        home: { title: "Высокоточная Стоматология и Лазерный Центр", desc: "OSCORP Klinika в Баку — обитель прецизионной стоматологии, лазерной эпиляции и цифровых инноваций. Совершенные улыбки — Ваша уверенность." },
+        services: { title: "Стоматологические и Эстетические Процедуры", desc: "Узнайте о наших элитных клинических услугах: имплантация, цифровой дизайн улыбки и продвинутая реставрация." },
+        laserHub: { title: "Передовой Лазерный Центр | Candela Pro-U", desc: "Золотой стандарт дерматологических лазерных технологий. Безболезненная лазерная эпиляция и омоложение кожи в Баку." },
+        innovation: { title: "Цифровая Лаборатория и Инновации", desc: "Собственная лаборатория цифровой стоматологии. 3D-картирование и робототехника CAD/CAM для реставраций в тот же день." },
+        contact: { title: "Записаться на Консультацию", desc: "Начните путь к улыбке в OSCORP. Свяжитесь с консьержем для точной диагностики и индивидуального ухода." }
+      },
       footer: {
         description: "Премиальное пространство, посвященное пересечению здоровья полости рта и технологической точности.",
         sanctuary: "Пространство",
@@ -464,6 +478,13 @@ const resources = {
         freeConsultation: "Mükəmməl gülüş",
         bookConsultation: "Qəbula Yazılın",
         home: "Ana səhifə"
+      },
+      seo: {
+        home: { title: "Yüksək Dəqiqlikli Stomatologiya və Lazer Mərkəzi", desc: "Bakıda OSCORP Klinika — yüksək dəqiqlikli stomatologiya, lazer epilyasiyası və rəqəmsal innovasiyalar mərkəzi. Qüsursuz gülüşlər — Sizin özünəinamınız." },
+        services: { title: "Stomatoloji və Estetik Prosedurlar", desc: "Elit klinik xidmətlərimizlə tanış olun: implantasiya, rəqəmsal gülüş dizaynı və mükəmməl bərpa." },
+        laserHub: { title: "Mütərəqqi Lazer Mərkəzi | Candela Pro-U", desc: "Dermatoloji lazer texnologiyasında qızıl standart. Bakıda ağrısız lazer epilyasiyası və dərinin cavanlaşdırılması." },
+        innovation: { title: "Rəqəmsal Laboratoriya və İnnovasiyalar", desc: "Daxili rəqəmsal stomatologiya laboratoriyası. Eyni gündə bərpa üçün 3D xəritəçəkmə və CAD/CAM robototexnikası." },
+        contact: { title: "Konsultasiya üçün Qeydiyyat", desc: "OSCORP-da gülüş yolunuza başlayın. Dəqiq diaqnostika və fərdi qulluq üçün pasiyent konsyerji ilə əlaqə saxlayın." }
       },
       footer: {
         description: "Ağız sağlamlığı və texnoloji dəqiqliyin kəsişməsinə həsr olunmuş premium məkan.",
