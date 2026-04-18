@@ -99,7 +99,7 @@ export default function LaserHub() {
               <div className="absolute -bottom-8 -left-0 md:-left-8 bg-surface p-8 shadow-2xl rounded-lg max-w-[280px] border border-outline-variant/10">
                 <span className="material-symbols-outlined text-primary mb-4">precision_manufacturing</span>
                 <h4 className="font-headline font-bold text-xl mb-2 text-emerald-950">{t('laserHub.precisionTitle')}</h4>
-                <p className="font-body text-[10px] text-on-surface-variant leading-relaxed uppercase tracking-tighter font-bold">
+                <p className="font-body text-xs text-on-surface-variant leading-relaxed uppercase tracking-widest font-bold">
                   {t('laserHub.precisionDesc')}
                 </p>
               </div>
@@ -113,10 +113,10 @@ export default function LaserHub() {
             <div className="flex justify-between items-end mb-20 gap-8">
               <div className="max-w-2xl">
                 <h6 className="font-headline font-bold text-emerald-950 mb-2">{t('laserHub.techTitle')}</h6>
-                <p className="text-stone-500 text-sm font-body leading-relaxed">{t('laserHub.techDesc')}</p>
+                <p className="text-stone-500 text-base font-body leading-relaxed">{t('laserHub.techDesc')}</p>
               </div>
               <div className="hidden md:block">
-                <span className="font-label text-xs uppercase tracking-[0.5em] opacity-30 [writing-mode:vertical-rl] h-32 text-primary font-bold">
+                <span className="font-label text-sm uppercase tracking-[0.5em] opacity-30 [writing-mode:vertical-rl] h-32 text-primary font-bold">
                   EST. 2024 / OSCORP
                 </span>
               </div>
@@ -241,7 +241,7 @@ export default function LaserHub() {
         {/* CTA Section */}
         <section className="py-40 px-6 md:px-12 text-center">
           <div className="max-w-3xl mx-auto">
-            <span className="font-label text-xs font-bold uppercase tracking-[0.4em] text-primary mb-8 block">
+            <span className="font-label text-base font-bold uppercase tracking-[0.4em] text-primary mb-8 block">
               {t('laserHub.label')}
             </span>
             <h2 className="text-4xl md:text-6xl mb-12 text-emerald-950">
