@@ -31,8 +31,8 @@ const countries: Country[] = [
 function FlagImg({ code, size = 20 }: { code: string; size?: number }) {
   return (
     <img
-      src={`https://flagcdn.com/w${size}/${code}.png`}
-      srcSet={`https://flagcdn.com/w${size * 2}/${code}.png 2x`}
+      src={`https://flagcdn.com/w20/${code}.png`}
+      srcSet={`https://flagcdn.com/w40/${code}.png 2x`}
       width={size}
       height={Math.round(size * 0.75)}
       alt={code.toUpperCase()}
