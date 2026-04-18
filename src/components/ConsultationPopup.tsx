@@ -85,10 +85,10 @@ export default function ConsultationPopup() {
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-5xl bg-surface-bright rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 flex flex-col md:flex-row max-h-[90vh]"
+            className="relative w-full max-w-5xl bg-surface-bright rounded-[2.5rem] overflow-visible shadow-2xl border border-white/20 flex flex-col md:flex-row max-h-[90vh]"
           >
             {/* Left Column: Doctor Photo */}
-            <div className="hidden md:block md:w-5/12 relative">
+            <div className="hidden md:block md:w-5/12 relative rounded-l-[2.5rem] overflow-hidden">
               <img 
                 src="/popup-dr-photo.JPG" 
                 alt="Our Specialist" 
