@@ -60,7 +60,7 @@ export default function Home() {
       </script>
       <main className="pt-16 lg:pt-0">
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] lg:min-h-screen flex items-end pb-36 lg:items-center lg:pb-0 overflow-hidden">
+        <section className="relative min-h-[85vh] lg:min-h-screen flex items-start pt-24 lg:items-center lg:pt-0 overflow-hidden">
           <div className="absolute inset-0 z-0 bg-surface">
             <div className="absolute inset-x-0 bottom-0 top-[150px] lg:top-0">
               <motion.img 
@@ -73,7 +73,7 @@ export default function Home() {
                 alt="OSCORP Exterior"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-surface via-surface/90 lg:via-surface/60 to-transparent lg:to-transparent lg:from-surface pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-surface/80 lg:via-surface/60 to-transparent pointer-events-none"></div>
           </div>
           
           <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full">
