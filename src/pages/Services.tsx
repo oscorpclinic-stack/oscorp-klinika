@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function Services() {
@@ -77,9 +78,11 @@ export default function Services() {
                 <p className="text-surface-variant/90 max-w-lg mb-8 leading-relaxed font-body">
                     {t('services.implantsDesc')}
                 </p>
-                <button className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-sm font-bold group-hover:gap-4 transition-all">
-                    {t('services.learnMore')} <span className="material-symbols-outlined text-base">arrow_forward</span>
-                </button>
+                <Link to="/services/implants">
+                  <button className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-sm font-bold group-hover:gap-4 transition-all">
+                      {t('services.learnMore')} <span className="material-symbols-outlined text-base">arrow_forward</span>
+                  </button>
+                </Link>
               </div>
             </motion.div>
 
@@ -107,9 +110,11 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
-              <button className="w-full border border-outline-variant/20 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-300">
-                  {t('services.exploreArtistry')}
-              </button>
+              <Link to="/services/aesthetics" className="w-full">
+                <button className="w-full border border-outline-variant/20 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-300">
+                    {t('services.exploreArtistry')}
+                </button>
+              </Link>
             </motion.div>
 
             {/* Service 3: Orthodontics (Wide Secondary) */}
@@ -129,12 +134,11 @@ export default function Services() {
                 <p className="text-on-tertiary-container/70 mb-10 text-lg leading-relaxed max-w-sm font-medium">
                     {t('services.orthoDesc')}
                 </p>
-                <button 
-                  onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
-                  className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all"
-                >
-                    {t('services.viewPathway')}
-                </button>
+                <Link to="/services/orthodontics">
+                  <button className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all">
+                      {t('services.viewPathway')}
+                  </button>
+                </Link>
               </div>
             </motion.div>
 
@@ -156,9 +160,11 @@ export default function Services() {
                   <p className="text-on-surface-variant font-body text-lg leading-loose mb-6 font-medium">
                       {t('services.diagnosticsDesc')}
                   </p>
-                  <button className="text-primary text-base font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                      {t('services.dataSheets')} <span className="material-symbols-outlined text-base">open_in_new</span>
-                  </button>
+                  <Link to="/services/diagnostics">
+                    <button className="text-primary text-base font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
+                        {t('services.dataSheets')} <span className="material-symbols-outlined text-base">open_in_new</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
