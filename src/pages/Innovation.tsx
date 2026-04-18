@@ -29,7 +29,7 @@ export default function Innovation() {
 
   return (
     <>
-      <main className="pt-32 lg:pt-40">
+      <main className="pt-16 lg:pt-24">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32">
           <motion.div 
