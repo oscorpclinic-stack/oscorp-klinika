@@ -68,7 +68,7 @@ export default function Services() {
               className="col-span-12 md:col-span-8 bg-surface-container-low rounded-[2rem] overflow-hidden group relative flex flex-col justify-end p-8 md:p-12 min-h-[400px] md:min-h-[600px] shadow-sm border border-outline-variant/10"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10 opacity-70 transition-opacity group-hover:opacity-80"></div>
-              <img className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" data-alt="Implants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiP-hh788lRk5Ymuup4k1Ub5-cU-ePzRLv0TwcKrCND6ovLLIyDCotQPFXI0Oq7mqY3qpBw4rde0E7ARuxxYV5-o08DtdWNCDSJ6wZ7re8YVMr5TW11WUAEx-_ArTgywzZrcbSRlcRzuhm-H0xToiizYP8WhWxwjEWoGqBFC6ecVb2FCDY9J1whlIQPZ82eTi1Dp_CflspJTA7mVCAyTKkDz1FMtUlUSkBfxZ2is4Rpn3fyCLf-jdhTIXOvrpD8lbNKF1zHOV_Zzp9" alt="Implants" />
+              <img className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" data-alt="Implants" src="/implantdisnedir.jpg" alt="Implants" />
               <div className="relative z-20">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="material-symbols-outlined text-surface-container-lowest text-4xl">precision_manufacturing</span>
