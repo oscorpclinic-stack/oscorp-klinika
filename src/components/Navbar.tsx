@@ -75,12 +75,12 @@ export default function Navbar() {
 
           {/* Right Action Area */}
           <div className="flex items-center gap-4 md:gap-6">
-            <span className="flex gap-1.5 md:gap-2 items-center text-stone-500 text-xs md:text-sm font-label tracking-wide uppercase mr-1 md:mr-0">
-              <button onClick={() => changeLanguage('ru')} className={`transition-colors ${i18n.language === 'ru' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>RU</button>
+            <span className="flex gap-2 items-center text-stone-500 text-sm font-label tracking-wide uppercase mr-1 md:mr-0">
+              <button onClick={() => changeLanguage('ru')} className={`px-1.5 py-2 transition-colors ${i18n.language === 'ru' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>RU</button>
               <span className="opacity-50 font-light">|</span>
-              <button onClick={() => changeLanguage('az')} className={`transition-colors ${i18n.language === 'az' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>AZ</button>
+              <button onClick={() => changeLanguage('az')} className={`px-1.5 py-2 transition-colors ${i18n.language === 'az' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>AZ</button>
               <span className="opacity-50 font-light">|</span>
-              <button onClick={() => changeLanguage('en')} className={`transition-colors ${i18n.language === 'en' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>EN</button>
+              <button onClick={() => changeLanguage('en')} className={`px-1.5 py-2 transition-colors ${i18n.language === 'en' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>EN</button>
             </span>
             
 
