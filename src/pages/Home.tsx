@@ -95,7 +95,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+              className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6"
             >
               <div className="max-w-xl">
                 <h2 className="text-3xl md:text-4xl mb-4 font-headline font-bold text-emerald-950">{t('home.servicesTitle')}</h2>

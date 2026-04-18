@@ -36,7 +36,7 @@ export default function Innovation() {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
           >
             <div className="lg:col-span-7">
               <motion.span 

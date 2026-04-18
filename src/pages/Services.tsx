@@ -36,7 +36,7 @@ export default function Services() {
             initial="hidden"
             animate="visible"
             variants={containerVariants as any}
-            className="flex flex-col md:flex-row items-end justify-between border-b border-outline-variant/20 pb-12"
+            className="flex flex-col md:flex-row items-center justify-between border-b border-outline-variant/20 pb-12"
           >
             <div className="max-w-3xl">
               <motion.span variants={itemVariants} className="uppercase tracking-[0.2em] text-xs font-semibold text-primary/60 mb-6 block font-label">{t('services.label')}</motion.span>
