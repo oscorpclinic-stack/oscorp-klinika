@@ -34,7 +34,7 @@ export default function LaserHub() {
         description={t('seo.laserHub.desc')} 
         canonical="/laser-hub" 
       />
-      <main className="pt-16 lg:pt-44">
+      <main className="pt-32 lg:pt-44">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-10">
           <motion.div 

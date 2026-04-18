@@ -34,7 +34,7 @@ export default function Innovation() {
         description={t('seo.innovation.desc')} 
         canonical="/innovation" 
       />
-      <main className="pt-16 lg:pt-44">
+      <main className="pt-32 lg:pt-44">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32">
           <motion.div 
