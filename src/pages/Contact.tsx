@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import CustomSelect from '../components/CustomSelect';
 
 export default function Contact() {
   const { t } = useTranslation();
+  const [selectedService, setSelectedService] = useState("");
 
   return (
     <>
@@ -152,6 +154,8 @@ export default function Contact() {
                         { label: t('contact.option3'), value: "surgical" },
                         { label: t('contact.option4'), value: "general" }
                       ]}
+                      value={selectedService}
+                      onChange={setSelectedService}
                       placeholder={t('contact.interest')}
                     />
                   </div>

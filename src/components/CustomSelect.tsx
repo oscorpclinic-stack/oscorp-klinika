@@ -1,7 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
 
+interface Option {
+  label: string;
+  value: string;
+}
+
 interface CustomSelectProps {
-  options: string[];
+  options: Option[];
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
@@ -10,6 +15,8 @@ interface CustomSelectProps {
 export default function CustomSelect({ options, value, onChange, placeholder }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const selectedOption = options.find(opt => opt.value === value);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -28,7 +35,7 @@ export default function CustomSelect({ options, value, onChange, placeholder }: 
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={value ? "text-on-surface" : "text-outline-variant/50"}>
-          {value || placeholder}
+          {selectedOption ? selectedOption.label : placeholder}
         </span>
         <span className={`material-symbols-outlined text-outline-variant transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
           expand_more
@@ -40,18 +47,18 @@ export default function CustomSelect({ options, value, onChange, placeholder }: 
           <ul className="max-h-60 overflow-y-auto">
             {options.map((option) => (
               <li 
-                key={option}
+                key={option.value}
                 className={`px-5 py-4 cursor-pointer text-sm transition-all duration-200 ${
-                  value === option 
+                  value === option.value 
                     ? 'bg-primary text-on-primary font-bold' 
                     : 'hover:bg-surface-variant text-on-surface font-medium'
                 }`}
                 onClick={() => {
-                  onChange(option);
+                  onChange(option.value);
                   setIsOpen(false);
                 }}
               >
-                {option}
+                {option.label}
               </li>
             ))}
           </ul>
