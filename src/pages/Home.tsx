@@ -240,15 +240,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sticky CTA */}
-        <div className="fixed bottom-8 right-8 z-[60]">
-          <Link to="/contact#booking-form">
-            <button className="bg-primary text-on-primary shadow-2xl rounded-full px-6 py-4 flex items-center gap-3 hover:scale-105 active:scale-95 transition-all group border border-white/20">
-              <span className="material-symbols-outlined fill-icon group-hover:rotate-12 transition-transform">calendar_month</span>
-              <span className="font-bold text-sm font-label uppercase tracking-widest">{t('home.bookConsultation')}</span>
-            </button>
-          </Link>
-        </div>
       </main>
     </>
   );

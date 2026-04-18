@@ -169,11 +169,6 @@ export default function Navbar() {
                 AZ
               </button>
             </div>
-            <Link to="/contact#booking-form" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="gradient-button text-on-primary w-full py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] active:scale-[0.98] transition-all shadow-xl shadow-primary/20">
-                {t('navbar.bookConsultation')}
-              </button>
-            </Link>
           </div>
         </div>
       </div>
