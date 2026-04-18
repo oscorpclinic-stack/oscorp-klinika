@@ -221,7 +221,10 @@ const resources = {
         hub: "OSCORP Klinika",
         hubDesc: "Located in the Nizami district, our clinic offers a modern and serene environment, providing the calmest and most private treatment experience in the city.",
         parking: "Parking Information",
-        parkingDesc: "Convenient parking is available near the clinic entrance for all OSCORP patients."
+        parkingDesc: "Convenient parking is available near the clinic entrance for all OSCORP patients.",
+        successTitle: "Request Received",
+        successDesc: "Thank you for choosing OSCORP. Our patient concierge will contact you within 24 hours to finalize your visit.",
+        sendAnother: "Send Another Request"
       }
     }
   },
@@ -232,7 +235,7 @@ const resources = {
         laserHub: "Лазерный Центр",
         innovation: "Инновации",
         contact: "Контакты",
-        freeConsultation: "Начните путь к идеальной улыбке",
+        freeConsultation: "Идеальная улыбка",
         bookConsultation: "Записаться",
         home: "Главная"
       },
@@ -255,7 +258,7 @@ const resources = {
         heroTitle2: "Стоматология & Лазерные",
         heroTitle3: "Инновации",
         heroDesc: "Совершенные улыбки — Ваша уверенность. OSCORP объединяет передовые технологии, точную диагностику и индивидуальный подход к каждому пациенту.",
-        freeConsultation: "Начните путь к идеальной улыбке",
+        freeConsultation: "Начните путь",
         ourTechnology: "Наши Технологии",
         bioLabel: "Биологическая Архитектура",
         bioTitle: "Здоровье, Эстетика и Уверенность.",
@@ -444,7 +447,10 @@ const resources = {
         hub: "OSCORP Klinika",
         hubDesc: "Наша клиника, расположенная в Низаминском районе, предлагает современную и спокойную обстановку, предоставляя самый тихий и приватный опыт лечения в городе.",
         parking: "Информация о Парковке",
-        parkingDesc: "Для всех пациентов OSCORP доступна удобная парковка рядом со входом в клинику."
+        parkingDesc: "Для всех пациентов OSCORP доступна удобная парковка рядом со входом в клинику.",
+        successTitle: "Запрос Получен",
+        successDesc: "Благодарим вас за выбор OSCORP. Наш координатор свяжется с вами в течение 24 часов для подтверждения записи.",
+        sendAnother: "Отправить еще один запрос"
       }
     }
   },
@@ -455,7 +461,7 @@ const resources = {
         laserHub: "Lazer Mərkəzi",
         innovation: "İnnovasiyalar",
         contact: "Əlaqə",
-        freeConsultation: "Mükəmməl gülüş yoluna başlayın",
+        freeConsultation: "Mükəmməl gülüş",
         bookConsultation: "Qəbula Yazılın",
         home: "Ana səhifə"
       },
@@ -478,7 +484,7 @@ const resources = {
         heroTitle2: "Stomatologiya və Lazer",
         heroTitle3: "İnnovasiyaları",
         heroDesc: "Qüsursuz gülüşlər — Sizin özünəinamınız. OSCORP qabaqcıl texnologiyanı, dəqiq diaqnostikanı və fərdi yanaşmanı birləşdirir.",
-        freeConsultation: "Mükəmməl gülüş yoluna başlayın",
+        freeConsultation: "Gülüş yoluna başlayın",
         ourTechnology: "Texnologiyalarımız",
         bioLabel: "Bioloji Memarlıq",
         bioTitle: "Sağlamlıq, Estetika və Özünəinam.",
@@ -667,7 +673,10 @@ const resources = {
         hub: "OSCORP Klinika",
         hubDesc: "Nizami rayonunda yerləşən klinikamız sakit və müasir bir mühit təklif edərək şəhərdə ən rahat və fərdi müalicə təcrübəsi təqdim edir.",
         parking: "Parkinq Məlumatı",
-        parkingDesc: "Bütün OSCORP pasiyentləri üçün klinikanın girişinə yaxın əlverişli parkinq mövcuddur."
+        parkingDesc: "Bütün OSCORP pasiyentləri üçün klinikanın girişinə yaxın əlverişli parkinq mövcuddur.",
+        successTitle: "Sorğu Qəbul Edildi",
+        successDesc: "OSCORP-u seçdiyiniz üçün təşəkkür edirik. Pasiyent koordinatorumuz 24 saat ərzində sizinlə əlaqə saxlayacaqdır.",
+        sendAnother: "Yeni Sorğu Göndər"
       }
     }
   }

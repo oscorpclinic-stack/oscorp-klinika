@@ -95,9 +95,9 @@ export default function Contact() {
             </motion.span>
             <motion.h1 
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-7xl leading-[1.1] md:leading-[0.9] text-emerald-950 break-words font-headline font-bold"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] md:leading-[0.9] text-emerald-950 font-headline font-bold"
             >
-              {t('contact.title1')} <br/> 
+              <span className="block mb-2">{t('contact.title1')}</span>
               <span className="text-outline-variant/30">{t('contact.title2')}</span>
             </motion.h1>
             <motion.p 
@@ -209,18 +209,22 @@ export default function Contact() {
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-emerald-50 border border-emerald-100 p-12 rounded-xl text-center"
+                  className="bg-surface-container-lowest border border-primary/10 p-10 md:p-20 rounded-xl text-center shadow-sm"
                 >
-                  <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">
-                    <span className="material-symbols-outlined text-4xl">check</span>
+                  <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-8">
+                    <span className="material-symbols-outlined text-4xl">check_circle</span>
                   </div>
-                  <h3 className="text-2xl font-headline font-bold text-emerald-950 mb-3">{t('contact.successTitle') || "Request Sent!"}</h3>
-                  <p className="text-emerald-800/70 mb-8 font-medium">{t('contact.successDesc') || "Thank you. Our concierge will contact you shortly."}</p>
+                  <h3 className="text-2xl font-headline font-bold text-emerald-950 mb-4">
+                    {t('contact.successTitle')}
+                  </h3>
+                  <p className="text-on-surface-variant mb-10 text-lg leading-relaxed max-w-sm mx-auto">
+                    {t('contact.successDesc')}
+                  </p>
                   <button 
                     onClick={() => setIsSuccess(false)}
-                    className="text-emerald-600 font-bold uppercase tracking-widest text-xs border-b border-emerald-600/20 hover:border-emerald-600 transition-all font-label"
+                    className="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold text-sm uppercase tracking-widest hover:bg-primary/90 transition-all active:scale-95"
                   >
-                    {t('contact.sendAnother') || "Send Another Request"}
+                    {t('contact.sendAnother')}
                   </button>
                 </motion.div>
               ) : (
