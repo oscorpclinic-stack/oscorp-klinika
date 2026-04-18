@@ -99,10 +99,10 @@ export default function Home() {
                 </motion.h1>
               </div>
 
-              <div className="mt-auto lg:mt-0">
+              <div className="mt-auto lg:mt-0 flex flex-col-reverse lg:block gap-8 lg:gap-0">
                 <motion.p 
                   variants={itemVariants}
-                  className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body"
+                  className="text-lg md:text-xl text-on-surface-variant lg:mb-10 max-w-lg leading-relaxed font-body"
                 >
                   {t('home.heroDesc')}
                 </motion.p>
