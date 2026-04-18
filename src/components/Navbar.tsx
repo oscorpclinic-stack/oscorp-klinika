@@ -144,26 +144,7 @@ export default function Navbar() {
           </div>
           
           <div className="mt-12 flex flex-col gap-10 pb-12">
-            <div className="flex gap-8 text-on-surface-variant font-label text-sm uppercase tracking-widest font-bold">
-              <button 
-                onClick={() => { changeLanguage('ru'); setIsMobileMenuOpen(false); }} 
-                className={`transition-colors ${i18n.language === 'ru' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
-              >
-                RU
-              </button>
-              <button 
-                onClick={() => { changeLanguage('en'); setIsMobileMenuOpen(false); }} 
-                className={`transition-colors ${i18n.language === 'en' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
-              >
-                EN
-              </button>
-              <button 
-                onClick={() => { changeLanguage('az'); setIsMobileMenuOpen(false); }} 
-                className={`transition-colors ${i18n.language === 'az' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
-              >
-                AZ
-              </button>
-            </div>
+            {/* Language switcher removed as it is now in the header */}
           </div>
         </div>
       </div>
