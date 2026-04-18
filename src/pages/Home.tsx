@@ -78,7 +78,7 @@ export default function Home() {
           
           <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full h-full lg:h-auto">
             <motion.div 
-              className="max-w-5xl flex flex-col min-h-[calc(85vh-8rem)] pb-32 lg:pb-0 lg:min-h-0 lg:block justify-between"
+              className="max-w-5xl flex flex-col min-h-[calc(85vh-8rem)] pb-16 lg:pb-0 lg:min-h-0 lg:block justify-between"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
