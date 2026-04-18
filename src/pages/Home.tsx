@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="pt-36 lg:pt-0">
+      <main className="pt-28 lg:pt-0">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
