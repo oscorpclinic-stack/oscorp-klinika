@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-12 py-20 max-w-[1920px] mx-auto">
             <div className="col-span-1 md:col-span-1">
-                <div className="mb-6"><img src="/logo.svg" alt="OSCORP Klinika" className="h-10 w-auto opacity-80" /></div>
+                <div className="mb-6"><img src="/logo.svg" alt="OSCORP Klinika" className="h-14 w-auto opacity-90" /></div>
                 <p className="text-stone-400 font-body text-sm leading-relaxed mb-6">
                     {t('footer.description')}
                 </p>
