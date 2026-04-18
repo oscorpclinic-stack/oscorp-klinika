@@ -1,0 +1,218 @@
+import { useTranslation } from 'react-i18next';
+import CustomSelect from '../components/CustomSelect';
+
+export default function Contact() {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <main className="pt-24 lg:pt-32 pb-24">
+        {/* Hero Section */}
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
+          <div className="space-y-6">
+            <span className="uppercase tracking-[0.2em] text-primary font-semibold text-xs font-label">
+              {t('contact.label')}
+            </span>
+            <h1 className="text-5xl md:text-7xl leading-[0.9] text-emerald-950">
+              {t('contact.title1')} <br/> 
+              <span className="text-outline-variant/30">{t('contact.title2')}</span>
+            </h1>
+            <p className="text-on-surface-variant max-w-md text-lg leading-relaxed font-light">
+              {t('contact.desc')}
+            </p>
+          </div>
+          <div className="h-64 md:h-[400px] bg-surface-container-low rounded-xl overflow-hidden relative">
+            <img 
+              className="w-full h-full object-cover brightness-90 hover:brightness-100 transition-all duration-700" 
+              data-alt="Clinic interior" 
+              src="/dr-room.JPG"
+              alt="OSCORP Internal"
+            />
+            <div className="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
+          </div>
+        </section>
+
+        {/* Main Interaction Section */}
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Information Panel */}
+          <div className="lg:col-span-5 space-y-16">
+            {/* Location */}
+            <div className="group">
+              <h3 className="font-headline font-bold text-2xl mb-8 tracking-tight border-b border-outline-variant/20 pb-4 text-emerald-950">
+                {t('contact.principal')}
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <span className="material-symbols-outlined text-primary mt-1">location_on</span>
+                  <div>
+                    <p className="text-emerald-950 font-medium text-lg leading-tight mb-1">{t('contact.avenue')}</p>
+                    <p className="text-on-surface-variant font-bold">{t('contact.city')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Operating Hours */}
+            <div>
+              <h3 className="font-headline font-bold text-2xl mb-8 tracking-tight border-b border-outline-variant/20 pb-4 text-emerald-950">
+                {t('contact.hours')}
+              </h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-on-surface-variant font-medium">{t('contact.weekdays')}</span>
+                  <span className="text-primary font-bold">09:00 — 20:00</span>
+                </div>
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-on-surface-variant font-medium">{t('contact.saturday')}</span>
+                  <span className="text-primary font-bold">10:00 — 18:00</span>
+                </div>
+                <div className="flex justify-between items-center text-sm">
+                  <span className="text-on-surface-variant font-medium">{t('contact.sunday')}</span>
+                  <span className="text-tertiary font-bold italic">{t('contact.appointment')}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Details */}
+            <div>
+              <h3 className="font-headline font-bold text-2xl mb-8 tracking-tight border-b border-outline-variant/20 pb-4 text-emerald-950">
+                {t('contact.channels')}
+              </h3>
+              <div className="space-y-6">
+                <a className="flex items-center gap-4 group" href={`tel:${t('contact.phoneNumber').replace(/\s/g, '')}`}>
+                  <span className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                    <span className="material-symbols-outlined text-xl">call</span>
+                  </span>
+                  <span className="text-lg font-bold text-emerald-950">{t('contact.phoneNumber')}</span>
+                </a>
+                <a className="flex items-center gap-4 group" href="mailto:concierge@oscorp.az">
+                  <span className="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                    <span className="material-symbols-outlined text-xl">mail</span>
+                  </span>
+                  <span className="text-lg font-bold text-emerald-950">concierge@oscorp.az</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Socials */}
+            <div className="pt-8 flex gap-4 flex-wrap">
+              <a className="px-6 py-2 border border-outline-variant/30 rounded-full text-xs font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
+                {t('contact.instagram')}
+              </a>
+              <a className="px-6 py-2 border border-outline-variant/30 rounded-full text-xs font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
+                {t('contact.linkedin')}
+              </a>
+            </div>
+          </div>
+
+          {/* Booking Form Card */}
+          <div className="lg:col-span-7">
+            <div className="bg-surface-container-low p-8 md:p-16 rounded-xl relative overflow-hidden shadow-sm">
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+              <h2 className="text-3xl text-emerald-950 mb-2">{t('contact.request')}</h2>
+              <p className="text-on-surface-variant mb-12 text-sm max-w-md">
+                {t('contact.requestDesc')}
+              </p>
+              
+              <form className="flex flex-col gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
+                    <input 
+                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                      placeholder="John Doe" 
+                      type="text"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.email')}</label>
+                    <input 
+                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                      placeholder="email@address.com" 
+                      type="email"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
+                    <input 
+                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                      placeholder="+994 -- --- -- --" 
+                      type="tel"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.interest')}</label>
+                    <CustomSelect 
+                      options={[
+                        { label: t('contact.option1'), value: "laser" },
+                        { label: t('contact.option2'), value: "diagnostic" },
+                        { label: t('contact.option3'), value: "surgical" },
+                        { label: t('contact.option4'), value: "general" }
+                      ]}
+                      placeholder={t('contact.interest')}
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.notes')}</label>
+                  <textarea 
+                    className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 resize-none font-medium outline-none text-base" 
+                    placeholder={t('contact.notesPlaceholder')}
+                    rows={4}
+                  ></textarea>
+                </div>
+
+                <div className="pt-8">
+                  <button type="button" className="w-full bg-primary text-on-primary py-6 px-8 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:shadow-2xl transition-all active:scale-[0.98] leading-tight">
+                    {t('contact.submit')}
+                  </button>
+                  <p className="text-center mt-6 text-[10px] text-outline-variant uppercase tracking-widest font-bold">
+                    {t('contact.encrypted')}
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Asymmetric Map Section */}
+        <section className="mt-32 max-w-[1440px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-2xl shadow-primary/5">
+            <div className="lg:col-span-2 bg-primary p-12 md:p-16 flex flex-col justify-center text-on-primary">
+              <h3 className="text-3xl font-headline font-bold mb-6 tracking-tight">{t('contact.hub')}</h3>
+              <p className="text-on-primary-container text-lg leading-relaxed mb-8 opacity-90">
+                {t('contact.hubDesc')}
+              </p>
+              <div className="space-y-2">
+                <p className="text-sm font-headline font-bold uppercase tracking-widest opacity-60">
+                  {t('contact.parking')}
+                </p>
+                <p className="text-sm opacity-90">
+                  {t('contact.parkingDesc')}
+                </p>
+              </div>
+            </div>
+            <div className="lg:col-span-3 h-[500px] bg-surface-container-high relative">
+              <img 
+                className="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" 
+                data-alt="Map of Baku" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD29XysfoDqPLLtVTxhCdJec-tOIe3aqAzztB4GLgw9FEA5vLgAfr4xJuFGKwENzseLTpk9F5ek0GogArOZTzZ65YXrTjhfyDL4U_x7W70e0fTl0FmEwFtKXXKWyWDjqzA_Y8YUjFQN20g6uLj7qBd6njp-Nb_UyNwc6yTMzCd30phaDM69XszS5fgPJxblmelnoQQWZIh1TtUj_3RnAqJeYarMAKomDaEz9S-Z9RYTRTYBvQVZkzY-xpnR_pZMpNSkzu-tvvUVeay"
+                alt="Map Marker"
+              />
+              {/* Marker Overlay */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                <div className="w-16 h-16 bg-primary/20 rounded-full animate-pulse flex items-center justify-center">
+                  <div className="w-8 h-8 bg-primary rounded-full border-4 border-surface shadow-xl"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
