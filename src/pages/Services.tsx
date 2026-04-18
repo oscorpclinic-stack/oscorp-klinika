@@ -29,7 +29,7 @@ export default function Services() {
 
   return (
     <>
-      <main className="pt-8 lg:pt-16 pb-24 overflow-hidden">
+      <main className="pt-24 lg:pt-36 pb-24 overflow-hidden">
         {/* Hero Section: Editorial Header */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-16 md:mb-32">
           <motion.div 

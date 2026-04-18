@@ -29,7 +29,7 @@ export default function LaserHub() {
 
   return (
     <>
-      <main className="pt-8 lg:pt-12">
+      <main className="pt-24 lg:pt-32">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-10">
           <motion.div 
