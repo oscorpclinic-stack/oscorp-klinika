@@ -148,29 +148,29 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="mt-auto flex flex-col gap-8">
-            <div className="flex gap-6 text-on-surface-variant font-label text-sm uppercase tracking-widest font-bold">
+          <div className="mt-12 flex flex-col gap-10 pb-12">
+            <div className="flex gap-8 text-on-surface-variant font-label text-sm uppercase tracking-widest font-bold">
               <button 
                 onClick={() => { changeLanguage('ru'); setIsMobileMenuOpen(false); }} 
-                className={`pb-1 ${i18n.language === 'ru' ? 'text-primary border-b-2 border-primary' : ''}`}
+                className={`transition-colors ${i18n.language === 'ru' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
               >
                 RU
               </button>
               <button 
                 onClick={() => { changeLanguage('en'); setIsMobileMenuOpen(false); }} 
-                className={`pb-1 ${i18n.language === 'en' ? 'text-primary border-b-2 border-primary' : ''}`}
+                className={`transition-colors ${i18n.language === 'en' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
               >
                 EN
               </button>
               <button 
                 onClick={() => { changeLanguage('az'); setIsMobileMenuOpen(false); }} 
-                className={`pb-1 ${i18n.language === 'az' ? 'text-primary border-b-2 border-primary' : ''}`}
+                className={`transition-colors ${i18n.language === 'az' ? 'text-primary border-b-2 border-primary pb-1' : 'hover:text-primary'}`}
               >
                 AZ
               </button>
             </div>
-            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="gradient-button text-on-primary w-full py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] active:scale-[0.98] transition-transform">
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+              <button className="gradient-button text-on-primary w-full py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] active:scale-[0.98] transition-all shadow-xl shadow-primary/20">
                 {t('navbar.bookConsultation')}
               </button>
             </Link>
