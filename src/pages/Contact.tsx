@@ -1,29 +1,71 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import CustomSelect from '../components/CustomSelect';
 
 export default function Contact() {
   const { t } = useTranslation();
   const [selectedService, setSelectedService] = useState("");
 
+  const containerVariants: any = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut",
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
   return (
     <>
-      <main className="pt-24 lg:pt-32 pb-24">
+      <main className="pt-32 lg:pt-48 pb-24 overflow-hidden">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
-          <div className="space-y-6">
-            <span className="uppercase tracking-[0.2em] text-primary font-semibold text-xs font-label">
+          <motion.div 
+            className="space-y-6"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.span 
+              variants={itemVariants}
+              className="uppercase tracking-[0.2em] text-primary font-semibold text-xs font-label block"
+            >
               {t('contact.label')}
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-7xl leading-[1.1] md:leading-[0.9] text-emerald-950 break-words">
+            </motion.span>
+            <motion.h1 
+              variants={itemVariants}
+              className="text-3xl sm:text-4xl md:text-7xl leading-[1.1] md:leading-[0.9] text-emerald-950 break-words font-headline font-bold"
+            >
               {t('contact.title1')} <br/> 
               <span className="text-outline-variant/30">{t('contact.title2')}</span>
-            </h1>
-            <p className="text-on-surface-variant max-w-md text-lg leading-relaxed font-light">
+            </motion.h1>
+            <motion.p 
+              variants={itemVariants}
+              className="text-on-surface-variant max-w-md text-lg leading-relaxed font-light"
+            >
               {t('contact.desc')}
-            </p>
-          </div>
-          <div className="h-64 md:h-[400px] bg-surface-container-low rounded-xl overflow-hidden relative">
+            </motion.p>
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+            className="h-64 md:h-[400px] bg-surface-container-low rounded-xl overflow-hidden relative shadow-2xl"
+          >
             <img 
               className="w-full h-full object-cover brightness-90 hover:brightness-100 transition-all duration-700" 
               data-alt="Clinic interior" 
@@ -31,7 +73,7 @@ export default function Contact() {
               alt="OSCORP Internal"
             />
             <div className="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Main Interaction Section */}

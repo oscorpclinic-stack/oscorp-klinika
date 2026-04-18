@@ -1,8 +1,31 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   const { t } = useTranslation();
+
+  const containerVariants: any = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut",
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
 
   return (
     <>
@@ -10,7 +33,10 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
+            <motion.img 
+              initial={{ scale: 1.1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
               className="w-full h-full object-cover object-center" 
               data-alt="Ultra-modern clinical interior" 
               src="/hero-banner.svg"
@@ -20,81 +46,89 @@ export default function Home() {
           </div>
           
           <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full">
-            <div className="max-w-5xl">
-              <span className="inline-block label-md text-primary font-semibold tracking-[0.2em] uppercase mb-4">
+            <motion.div 
+              className="max-w-5xl"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={containerVariants as any}
+            >
+              <motion.span 
+                variants={itemVariants}
+                className="inline-block label-md text-primary font-semibold tracking-[0.2em] uppercase mb-4"
+              >
                 {t('home.heroLabel')}
-              </span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-on-surface mb-8 leading-[1.1] break-words">
+              </motion.span>
+              <motion.h1 
+                variants={itemVariants}
+                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-on-surface mb-8 leading-[1.1] break-words"
+              >
                 {t('home.heroTitle1')} <span className="text-primary-container">{t('home.heroTitle2')}</span> {t('home.heroTitle3')}
-              </h1>
-              <p className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body">
+              </motion.h1>
+              <motion.p 
+                variants={itemVariants}
+                className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body"
+              >
                 {t('home.heroDesc')}
-              </p>
-              <div className="flex flex-wrap gap-4">
+              </motion.p>
+              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
                 <Link to="/contact">
-                  <button className="bg-primary text-on-primary px-8 lg:px-10 py-6 rounded-full font-semibold shadow-lg hover:shadow-primary/20 transition-all font-label text-sm uppercase tracking-widest leading-tight">
+                  <button className="bg-primary text-on-primary px-8 lg:px-10 py-6 rounded-full font-semibold shadow-lg hover:shadow-primary/20 transition-all font-label text-sm uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.freeConsultation')}
                   </button>
                 </Link>
                 <Link to="/innovation">
-                  <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm uppercase tracking-widest leading-tight">
+                  <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.ourTechnology')}
                   </button>
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* Services Bento Grid */}
         <section className="py-24 bg-surface">
           <div className="max-w-[1920px] mx-auto px-6 md:px-12">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+            >
               <div className="max-w-xl">
-                <h2 className="text-3xl md:text-4xl mb-4">{t('home.servicesTitle')}</h2>
-                <p className="text-on-surface-variant font-body">{t('home.servicesDesc')}</p>
+                <h2 className="text-3xl md:text-4xl mb-4 font-headline font-bold text-emerald-950">{t('home.servicesTitle')}</h2>
+                <p className="text-on-surface-variant font-body text-lg leading-relaxed">{t('home.servicesDesc')}</p>
               </div>
-              <Link to="/services" className="text-primary font-semibold border-b-2 border-primary/20 pb-2 hover:border-primary transition-all font-headline">
+              <Link to="/services" className="text-primary font-semibold border-b-2 border-primary/20 pb-2 hover:border-primary transition-all font-headline uppercase tracking-widest text-xs">
                 {t('home.proceduresLink')}
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Card 1 */}
-              <div className="group p-8 bg-surface-container-low rounded-xl transition-all duration-300 hover:bg-surface-container-highest border border-outline-variant/10">
-                <div className="mb-12 w-12 h-12 flex items-center justify-center rounded-full bg-primary-container/10 text-primary transition-transform group-hover:-translate-y-1">
-                  <span className="material-symbols-outlined text-3xl">dentistry</span>
-                </div>
-                <h3 className="font-headline text-xl font-bold mb-3">{t('home.implantTitle')}</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed font-body">{t('home.implantDesc')}</p>
-              </div>
-              
-              {/* Card 2 */}
-              <div className="group p-8 bg-surface-container-low rounded-xl transition-all duration-300 hover:bg-surface-container-highest border border-outline-variant/10">
-                <div className="mb-12 w-12 h-12 flex items-center justify-center rounded-full bg-primary-container/10 text-primary transition-transform group-hover:-translate-y-1">
-                  <span className="material-symbols-outlined text-3xl">biotech</span>
-                </div>
-                <h3 className="font-headline text-xl font-bold mb-3">{t('home.treatmentTitle')}</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed font-body">{t('home.treatmentDesc')}</p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="group p-8 bg-surface-container-low rounded-xl transition-all duration-300 hover:bg-surface-container-highest border border-outline-variant/10">
-                <div className="mb-12 w-12 h-12 flex items-center justify-center rounded-full bg-primary-container/10 text-primary transition-transform group-hover:-translate-y-1">
-                  <span className="material-symbols-outlined text-3xl">orthopedics</span>
-                </div>
-                <h3 className="font-headline text-xl font-bold mb-3">{t('home.orthoTitle')}</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed font-body">{t('home.orthoDesc')}</p>
-              </div>
-
-              {/* Card 4 */}
-              <div className="group p-8 bg-surface-container-low rounded-xl transition-all duration-300 hover:bg-surface-container-highest border border-outline-variant/10">
-                <div className="mb-12 w-12 h-12 flex items-center justify-center rounded-full bg-primary-container/10 text-primary transition-transform group-hover:-translate-y-1">
-                  <span className="material-symbols-outlined text-3xl">architecture</span>
-                </div>
-                <h3 className="font-headline text-xl font-bold mb-3">{t('home.orthopedicsTitle')}</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed font-body">{t('home.orthopedicsDesc')}</p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: t('home.implantTitle'), desc: t('home.implantDesc'), icon: 'dentistry' },
+                { title: t('home.treatmentTitle'), desc: t('home.treatmentDesc'), icon: 'biotech' },
+                { title: t('home.orthoTitle'), desc: t('home.orthoDesc'), icon: 'orthopedics' },
+                { title: t('home.orthopedicsTitle'), desc: t('home.orthopedicsDesc'), icon: 'architecture' }
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                  whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                  className="group p-8 bg-surface-container-low rounded-[2rem] transition-all duration-300 hover:bg-surface-container-highest border border-outline-variant/10 hover:shadow-2xl hover:shadow-primary/5 active:scale-95"
+                >
+                  <div className="mb-12 w-12 h-12 flex items-center justify-center rounded-2xl bg-primary-container/10 text-primary transition-all group-hover:bg-primary group-hover:text-on-primary group-hover:rotate-12">
+                    <span className="material-symbols-outlined text-3xl">{service.icon}</span>
+                  </div>
+                  <h3 className="font-headline text-xl font-bold mb-3 text-emerald-950">{service.title}</h3>
+                  <p className="text-sm text-on-surface-variant leading-relaxed font-body font-medium">{service.desc}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

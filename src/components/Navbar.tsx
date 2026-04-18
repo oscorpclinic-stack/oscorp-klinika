@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   const location = useLocation();
@@ -27,7 +28,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-surface' : 'bg-surface/90 backdrop-blur-xl'} shadow-sm dark:shadow-none`}>
+      <motion.nav 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className={`fixed top-0 w-full z-50 transition-colors duration-300 ${isMobileMenuOpen ? 'bg-surface' : 'bg-surface/90 backdrop-blur-xl'} shadow-sm dark:shadow-none`}
+      >
         <div className="flex justify-between items-center px-6 md:px-12 py-5 max-w-[1920px] mx-auto relative z-50">
           <Link to="/" className="block" onClick={() => setIsMobileMenuOpen(false)}>
             <img src="/logo.svg" alt="OSCORP Klinika" className="h-14 md:h-16 w-auto object-contain" />
@@ -95,7 +101,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Mobile Menu Overlay - Moved outside nav to avoid backdrop-blur containing block bug */}
       <div 

@@ -1,47 +1,87 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function LaserHub() {
   const { t } = useTranslation();
 
+  const containerVariants: any = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut",
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
   return (
     <>
-      <main className="pt-24 lg:pt-0">
+      <main className="pt-32 lg:pt-40">
         {/* Hero Section: Editorial Asymmetry */}
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-20">
-          <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-10">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+          >
             <div className="md:col-span-12 lg:col-span-7 z-10">
-              <span className="inline-block font-label text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6">
+              <motion.span 
+                variants={itemVariants}
+                className="inline-block font-label text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6"
+              >
                 {t('laserHub.heroLabel')}
-              </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-emerald-950 mb-8">
+              </motion.span>
+              <motion.h1 
+                variants={itemVariants}
+                className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] text-emerald-950 mb-8 font-headline font-bold"
+              >
                 {t('laserHub.title')} <br/> 
                 <span className="text-outline-variant/30">{t('laserHub.heroTitleSpan')}</span>
-              </h1>
-              <p className="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10">
+              </motion.h1>
+              <motion.p 
+                variants={itemVariants}
+                className="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed mb-10 font-light"
+              >
                 {t('laserHub.desc')}
-              </p>
-              <div className="flex items-center gap-6 flex-wrap">
+              </motion.p>
+              <motion.div variants={itemVariants} className="flex items-center gap-6 flex-wrap">
                 <Link to="/contact">
-                  <button className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-10 py-6 rounded-full shadow-lg hover:shadow-primary/20 transition-all font-bold leading-tight">
+                  <button className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-10 py-6 rounded-full shadow-lg hover:shadow-primary/20 transition-all font-bold leading-tight active:scale-95">
                     {t('home.freeConsultation')}
                   </button>
                 </Link>
                 <div className="flex items-center gap-3 group cursor-pointer">
                   <span className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <span className="material-symbols-outlined group-hover:text-on-primary">play_arrow</span>
+                    <span className="material-symbols-outlined group-hover:text-on-primary font-bold">play_arrow</span>
                   </span>
                   <span className="font-label text-xs uppercase tracking-widest font-bold text-primary">
                     {t('laserHub.watchTech')}
                   </span>
                 </div>
-              </div>
+              </motion.div>
             </div>
             
-            <div className="md:col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
-              <div className="aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-high relative">
+            <motion.div 
+              variants={itemVariants}
+              className="md:col-span-12 lg:col-span-5 relative mt-12 lg:mt-0"
+            >
+              <div className="aspect-[4/5] rounded-[2rem] overflow-hidden bg-surface-container-high relative shadow-2xl">
                 <img 
-                  className="w-full h-full object-cover transition-all duration-700" 
+                  className="w-full h-full object-cover transition-all duration-700 hover:scale-105" 
                   data-alt="Laser handpiece" 
                   src="/laser-hero.jpg"
                   alt="Candela Handle"
@@ -57,8 +97,8 @@ export default function LaserHub() {
                   {t('laserHub.precisionDesc')}
                 </p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* The Precision Ecosystem: Bento Grid */}

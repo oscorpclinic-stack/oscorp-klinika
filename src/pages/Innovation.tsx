@@ -1,29 +1,69 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export default function Innovation() {
   const { t } = useTranslation();
 
+  const containerVariants: any = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: "easeOut",
+        staggerChildren: 0.15
+      }
+    }
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    }
+  };
+
   return (
     <>
-      <main className="pt-24 lg:pt-0">
+      <main className="pt-32 lg:pt-40">
         {/* Hero Section: Editorial Asymmetry */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32 pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end"
+          >
             <div className="lg:col-span-7">
-              <span className="text-label text-sm uppercase tracking-[0.2em] text-primary-container mb-6 block font-bold">
+              <motion.span 
+                variants={itemVariants}
+                className="text-label text-sm uppercase tracking-[0.2em] text-primary-container mb-6 block font-bold"
+              >
                 {t('innovation.label')}
-              </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl text-emerald-950 leading-none mb-8">
+              </motion.span>
+              <motion.h1 
+                variants={itemVariants}
+                className="text-4xl md:text-6xl lg:text-7xl text-emerald-950 leading-none mb-8 font-headline font-bold"
+              >
                 {t('innovation.title')}
-              </h1>
-              <p className="text-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+              </motion.h1>
+              <motion.p 
+                variants={itemVariants}
+                className="text-body text-xl text-on-surface-variant max-w-xl leading-relaxed font-light"
+              >
                 {t('innovation.desc')}
-              </p>
+              </motion.p>
             </div>
             
-            <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-              <div className="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-lg relative">
+            <motion.div 
+              variants={itemVariants}
+              className="lg:col-span-5 relative mt-12 lg:mt-0"
+            >
+              <div className="aspect-[4/5] bg-surface-container-low overflow-hidden rounded-[2rem] relative shadow-2xl">
                 <img 
                   alt="high-tech dental lab" 
                   className="w-full h-full object-cover transition-all duration-700 hover:scale-105" 
@@ -34,29 +74,47 @@ export default function Innovation() {
               </div>
               
               {/* Tolerance Overlay */}
-              <div className="absolute -bottom-8 -left-0 md:-left-8 bg-surface p-8 max-w-xs shadow-2xl border border-outline-variant/10 z-10">
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.8, duration: 1 }}
+                className="absolute -bottom-8 -left-0 md:-left-8 bg-surface p-8 max-w-xs shadow-2xl border border-outline-variant/10 z-10 rounded-2xl"
+              >
                 <span className="text-4xl font-headline font-bold text-primary block mb-2">0.01mm</span>
                 <p className="text-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
                   {t('innovation.tolerance')}
                 </p>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </section>
 
         {/* Process Bento Grid */}
         <section className="bg-surface-container-low py-32 px-6 md:px-12 mt-12">
           <div className="max-w-[1440px] mx-auto">
-            <div className="mb-20">
-              <h2 className="text-4xl md:text-5xl text-emerald-950">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="mb-20"
+            >
+              <h2 className="text-4xl md:text-5xl text-emerald-950 font-headline font-bold">
                 {t('innovation.ecoTitle')}
               </h2>
               <div className="w-24 h-1 bg-primary mt-4"></div>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {/* 3D Scanning */}
-              <div className="md:col-span-2 md:row-span-2 bg-surface p-8 md:p-12 flex flex-col justify-between group hover:bg-surface-bright transition-all duration-500 rounded-xl shadow-sm">
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                whileHover={{ y: -5 }}
+                className="md:col-span-2 md:row-span-2 bg-surface p-8 md:p-12 flex flex-col justify-between group hover:bg-surface-bright transition-all duration-500 rounded-3xl shadow-sm border border-outline-variant/10"
+              >
                 <div>
                   <span className="material-symbols-outlined text-4xl text-primary mb-8">clinical_notes</span>
                   <h3 className="text-headline text-3xl font-bold mb-4 text-emerald-950">{t('innovation.scan')}</h3>
@@ -72,7 +130,7 @@ export default function Innovation() {
                     src="/vnutrirotovoe-scanirovanie.jpg"
                   />
                 </div>
-              </div>
+              </motion.div>
 
               {/* 3D Printing */}
               <div className="bg-surface-container-highest p-8 flex flex-col justify-between rounded-xl">
