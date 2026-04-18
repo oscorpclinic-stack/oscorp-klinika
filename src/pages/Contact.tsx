@@ -22,6 +22,10 @@ export default function Contact() {
     setError("");
 
     try {
+      if (!supabase) {
+        throw new Error("Supabase connection is not configured on the server.");
+      }
+
       const { error: submitError } = await supabase
         .from('contact_submissions')
         .insert([
