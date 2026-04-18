@@ -98,7 +98,7 @@ export default function Contact() {
         description={t('seo.contact.desc')} 
         canonical="/contact" 
       />
-      <main className="pt-16 lg:pt-48 pb-24 overflow-hidden">
+      <main className="pt-32 lg:pt-48 pb-24 overflow-hidden">
         {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <motion.div 

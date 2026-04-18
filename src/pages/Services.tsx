@@ -34,7 +34,7 @@ export default function Services() {
         description={t('seo.services.desc')} 
         canonical="/services" 
       />
-      <main className="pt-16 lg:pt-48 pb-24 overflow-hidden">
+      <main className="pt-32 lg:pt-48 pb-24 overflow-hidden">
         {/* Hero Section: Editorial Header */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-16 md:mb-32">
           <motion.div 
