@@ -73,42 +73,47 @@ export default function Home() {
                 alt="OSCORP Exterior"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-surface/80 lg:via-surface/60 to-transparent pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-transparent lg:via-surface/60 to-surface/90 lg:to-transparent pointer-events-none"></div>
           </div>
           
-          <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full">
+          <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full h-full lg:h-auto">
             <motion.div 
-              className="max-w-5xl"
+              className="max-w-5xl flex flex-col min-h-[calc(85vh-8rem)] pb-32 lg:pb-0 lg:min-h-0 lg:block justify-between"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={containerVariants as any}
             >
-              <motion.span 
-                variants={itemVariants}
-                className="inline-block text-sm md:text-base text-primary font-semibold tracking-[0.2em] uppercase mb-4"
-              >
-                {t('home.heroLabel')}
-              </motion.span>
-              <motion.h1 
-                variants={itemVariants}
-                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-on-surface mb-8 leading-[1.1] break-words"
-              >
-                {t('home.heroTitle1')} <span className="text-primary-container">{t('home.heroTitle2')}</span> {t('home.heroTitle3')}
-              </motion.h1>
-              <motion.p 
-                variants={itemVariants}
-                className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body"
-              >
-                {t('home.heroDesc')}
-              </motion.p>
-              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-                <Link to="/innovation">
-                  <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm md:text-base uppercase tracking-widest leading-tight active:scale-95">
-                    {t('home.ourTechnology')}
-                  </button>
-                </Link>
-              </motion.div>
+              <div>
+                <motion.span 
+                  variants={itemVariants}
+                  className="inline-block text-sm md:text-base text-primary font-semibold tracking-[0.2em] uppercase mb-4"
+                >
+                  {t('home.heroLabel')}
+                </motion.span>
+                <motion.h1 
+                  variants={itemVariants}
+                  className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-on-surface mb-8 leading-[1.1] break-words"
+                >
+                  {t('home.heroTitle1')} <span className="text-primary-container">{t('home.heroTitle2')}</span> {t('home.heroTitle3')}
+                </motion.h1>
+              </div>
+
+              <div className="mt-auto lg:mt-0">
+                <motion.p 
+                  variants={itemVariants}
+                  className="text-lg md:text-xl text-on-surface-variant mb-10 max-w-lg leading-relaxed font-body"
+                >
+                  {t('home.heroDesc')}
+                </motion.p>
+                <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+                  <Link to="/innovation">
+                    <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm md:text-base uppercase tracking-widest leading-tight active:scale-95">
+                      {t('home.ourTechnology')}
+                    </button>
+                  </Link>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </section>
