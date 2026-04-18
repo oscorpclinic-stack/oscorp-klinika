@@ -61,17 +61,19 @@ export default function Home() {
       <main className="pt-16 lg:pt-0">
         {/* Hero Section */}
         <section className="relative min-h-[85vh] lg:min-h-screen flex items-start pt-24 lg:items-center lg:pt-0 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <motion.img 
-              initial={{ scale: 1.1, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              className="w-full h-full object-cover object-[85%_center] lg:object-[60%_center]" 
-              data-alt="Ultra-modern clinical interior" 
-              src="/hero-banner.svg"
-              alt="OSCORP Exterior"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-surface/80 lg:via-surface/60 to-transparent"></div>
+          <div className="absolute inset-0 z-0 bg-surface">
+            <div className="absolute inset-x-0 bottom-0 top-[150px] lg:top-0">
+              <motion.img 
+                initial={{ scale: 1.1, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="w-full h-full object-cover object-[85%_center] lg:object-[60%_center]" 
+                data-alt="Ultra-modern clinical interior" 
+                src="/hero-banner.svg"
+                alt="OSCORP Exterior"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-surface/80 lg:via-surface/60 to-transparent pointer-events-none"></div>
           </div>
           
           <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full">
