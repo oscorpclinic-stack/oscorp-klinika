@@ -31,9 +31,9 @@ export default function Contact() {
 
   return (
     <>
-      <main className="pt-16 lg:pt-28 pb-24 overflow-hidden">
+      <main className="pt-8 lg:pt-16 pb-24 overflow-hidden">
         {/* Hero Section */}
-        <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
           <motion.div 
             className="space-y-6"
             initial="hidden"

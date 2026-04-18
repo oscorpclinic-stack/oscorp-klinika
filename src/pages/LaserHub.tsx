@@ -29,14 +29,14 @@ export default function LaserHub() {
 
   return (
     <>
-      <main className="pt-16 lg:pt-24">
+      <main className="pt-8 lg:pt-12">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden px-6 md:px-12 py-10">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center"
+            className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start"
           >
             <div className="md:col-span-12 lg:col-span-7 z-10">
               <motion.span 

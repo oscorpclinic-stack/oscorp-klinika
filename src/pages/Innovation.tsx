@@ -29,14 +29,14 @@ export default function Innovation() {
 
   return (
     <>
-      <main className="pt-16 lg:pt-24">
+      <main className="pt-8 lg:pt-12">
         {/* Hero Section: Editorial Asymmetry */}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 mb-32">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start"
           >
             <div className="lg:col-span-7">
               <motion.span 
