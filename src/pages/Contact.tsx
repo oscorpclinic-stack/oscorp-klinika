@@ -3,9 +3,52 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import CustomSelect from '../components/CustomSelect';
 
+import { supabase } from '../lib/supabase';
+
 export default function Contact() {
   const { t } = useTranslation();
   const [selectedService, setSelectedService] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [notes, setNotes] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
+
+    try {
+      const { error: submitError } = await supabase
+        .from('contact_submissions')
+        .insert([
+          { 
+            name, 
+            email, 
+            phone, 
+            service: selectedService, 
+            notes 
+          }
+        ]);
+
+      if (submitError) throw submitError;
+
+      setIsSuccess(true);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setNotes("");
+      setSelectedService("");
+    } catch (err: any) {
+      console.error('Submission error:', err);
+      setError(err.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const containerVariants: any = {
     hidden: { opacity: 0, y: 30 },
@@ -158,69 +201,117 @@ export default function Contact() {
                 {t('contact.requestDesc')}
               </p>
               
-              <form className="flex flex-col gap-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
-                    <input 
-                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
-                      placeholder="John Doe" 
-                      type="text"
-                    />
+              {isSuccess ? (
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="bg-emerald-50 border border-emerald-100 p-12 rounded-xl text-center"
+                >
+                  <div className="w-20 h-20 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-emerald-500/20">
+                    <span className="material-symbols-outlined text-4xl">check</span>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.email')}</label>
-                    <input 
-                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
-                      placeholder="email@address.com" 
-                      type="email"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
-                    <input 
-                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
-                      placeholder="+994 -- --- -- --" 
-                      type="tel"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.interest')}</label>
-                    <CustomSelect 
-                      options={[
-                        { label: t('contact.option1'), value: "laser" },
-                        { label: t('contact.option2'), value: "diagnostic" },
-                        { label: t('contact.option3'), value: "surgical" },
-                        { label: t('contact.option4'), value: "general" }
-                      ]}
-                      value={selectedService}
-                      onChange={setSelectedService}
-                      placeholder={t('contact.interest')}
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.notes')}</label>
-                  <textarea 
-                    className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 resize-none font-medium outline-none text-base" 
-                    placeholder={t('contact.notesPlaceholder')}
-                    rows={4}
-                  ></textarea>
-                </div>
-
-                <div className="pt-8">
-                  <button type="button" className="w-full bg-primary text-on-primary py-6 px-8 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:shadow-2xl transition-all active:scale-[0.98] leading-tight">
-                    {t('contact.submit')}
+                  <h3 className="text-2xl font-headline font-bold text-emerald-950 mb-3">{t('contact.successTitle') || "Request Sent!"}</h3>
+                  <p className="text-emerald-800/70 mb-8 font-medium">{t('contact.successDesc') || "Thank you. Our concierge will contact you shortly."}</p>
+                  <button 
+                    onClick={() => setIsSuccess(false)}
+                    className="text-emerald-600 font-bold uppercase tracking-widest text-xs border-b border-emerald-600/20 hover:border-emerald-600 transition-all font-label"
+                  >
+                    {t('contact.sendAnother') || "Send Another Request"}
                   </button>
-                  <p className="text-center mt-6 text-[10px] text-outline-variant uppercase tracking-widest font-bold">
-                    {t('contact.encrypted')}
-                  </p>
-                </div>
-              </form>
+                </motion.div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-10">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
+                      <input 
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                        placeholder="John Doe" 
+                        type="text"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.email')}</label>
+                      <input 
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                        placeholder="email@address.com" 
+                        type="email"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
+                      <input 
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                        placeholder="+994 -- --- -- --" 
+                        type="tel"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.interest')}</label>
+                      <CustomSelect 
+                        options={[
+                          { label: t('contact.option1'), value: "laser" },
+                          { label: t('contact.option2'), value: "diagnostic" },
+                          { label: t('contact.option3'), value: "surgical" },
+                          { label: t('contact.option4'), value: "general" }
+                        ]}
+                        value={selectedService}
+                        onChange={setSelectedService}
+                        placeholder={t('contact.interest')}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.notes')}</label>
+                    <textarea 
+                      value={notes}
+                      onChange={(e) => setNotes(e.target.value)}
+                      className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 resize-none font-medium outline-none text-base" 
+                      placeholder={t('contact.notesPlaceholder')}
+                      rows={4}
+                    ></textarea>
+                  </div>
+
+                  {error && (
+                    <p className="text-red-500 text-xs font-medium bg-red-50 p-4 rounded-lg border border-red-100 flex items-center gap-2">
+                      <span className="material-symbols-outlined text-sm">error</span>
+                      {error}
+                    </p>
+                  )}
+
+                  <div className="pt-8">
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full bg-primary disabled:bg-primary/50 text-on-primary py-6 px-8 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:shadow-2xl transition-all active:scale-[0.98] leading-tight flex items-center justify-center gap-3"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-5 h-5 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                          <span>{t('contact.sending') || "Processing..."}</span>
+                        </>
+                      ) : (
+                        t('contact.submit')
+                      )}
+                    </button>
+                    <p className="text-center mt-6 text-[10px] text-outline-variant uppercase tracking-widest font-bold">
+                      {t('contact.encrypted')}
+                    </p>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </section>
