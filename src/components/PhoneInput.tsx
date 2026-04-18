@@ -3,31 +3,44 @@ import { useState, useRef, useEffect } from 'react';
 interface Country {
   code: string;
   dial: string;
-  flag: string;
 }
 
 const countries: Country[] = [
-  { code: "AZ", dial: "+994", flag: "🇦🇿" },
-  { code: "TR", dial: "+90", flag: "🇹🇷" },
-  { code: "RU", dial: "+7", flag: "🇷🇺" },
-  { code: "GE", dial: "+995", flag: "🇬🇪" },
-  { code: "IR", dial: "+98", flag: "🇮🇷" },
-  { code: "KZ", dial: "+7", flag: "🇰🇿" },
-  { code: "UA", dial: "+380", flag: "🇺🇦" },
-  { code: "UZ", dial: "+998", flag: "🇺🇿" },
-  { code: "DE", dial: "+49", flag: "🇩🇪" },
-  { code: "GB", dial: "+44", flag: "🇬🇧" },
-  { code: "US", dial: "+1", flag: "🇺🇸" },
-  { code: "FR", dial: "+33", flag: "🇫🇷" },
-  { code: "IT", dial: "+39", flag: "🇮🇹" },
-  { code: "ES", dial: "+34", flag: "🇪🇸" },
-  { code: "AE", dial: "+971", flag: "🇦🇪" },
-  { code: "SA", dial: "+966", flag: "🇸🇦" },
-  { code: "IL", dial: "+972", flag: "🇮🇱" },
-  { code: "CN", dial: "+86", flag: "🇨🇳" },
-  { code: "IN", dial: "+91", flag: "🇮🇳" },
-  { code: "BY", dial: "+375", flag: "🇧🇾" },
+  { code: "az", dial: "+994" },
+  { code: "tr", dial: "+90" },
+  { code: "ru", dial: "+7" },
+  { code: "ge", dial: "+995" },
+  { code: "ir", dial: "+98" },
+  { code: "kz", dial: "+7" },
+  { code: "ua", dial: "+380" },
+  { code: "uz", dial: "+998" },
+  { code: "de", dial: "+49" },
+  { code: "gb", dial: "+44" },
+  { code: "us", dial: "+1" },
+  { code: "fr", dial: "+33" },
+  { code: "it", dial: "+39" },
+  { code: "es", dial: "+34" },
+  { code: "ae", dial: "+971" },
+  { code: "sa", dial: "+966" },
+  { code: "il", dial: "+972" },
+  { code: "cn", dial: "+86" },
+  { code: "in", dial: "+91" },
+  { code: "by", dial: "+375" },
 ];
+
+function FlagImg({ code, size = 20 }: { code: string; size?: number }) {
+  return (
+    <img
+      src={`https://flagcdn.com/w${size}/${code}.png`}
+      srcSet={`https://flagcdn.com/w${size * 2}/${code}.png 2x`}
+      width={size}
+      height={Math.round(size * 0.75)}
+      alt={code.toUpperCase()}
+      className="inline-block rounded-sm object-cover"
+      style={{ minWidth: size }}
+    />
+  );
+}
 
 interface PhoneInputProps {
   value: string;
@@ -42,12 +55,10 @@ export default function PhoneInput({ value, onChange, className = "", required, 
   const [selected, setSelected] = useState<Country>(countries[0]);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Extract the local number (everything after the dial code)
   const getLocalNumber = () => {
     if (value.startsWith(selected.dial)) {
       return value.slice(selected.dial.length).trimStart();
     }
-    // Check if value starts with any known dial code
     for (const c of countries) {
       if (value.startsWith(c.dial)) {
         setSelected(c);
@@ -80,7 +91,7 @@ export default function PhoneInput({ value, onChange, className = "", required, 
   };
 
   const py = compact ? "py-3" : "py-4.5";
-  const text = compact ? "text-base" : "text-base";
+  const text = "text-base";
 
   return (
     <div className={`relative flex ${className}`} ref={dropdownRef}>
@@ -88,9 +99,9 @@ export default function PhoneInput({ value, onChange, className = "", required, 
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center gap-1.5 ${py} px-3 bg-surface-container-lowest border border-outline-variant/30 border-r-0 rounded-l-xl hover:bg-surface-container-low transition-colors shrink-0`}
+        className={`flex items-center gap-2 ${py} px-3 bg-surface-container-lowest border border-outline-variant/30 border-r-0 rounded-l-xl hover:bg-surface-container-low transition-colors shrink-0`}
       >
-        <span className="text-lg leading-none">{selected.flag}</span>
+        <FlagImg code={selected.code} size={22} />
         <span className={`${text} font-medium text-emerald-950 whitespace-nowrap`}>{selected.dial}</span>
         <span className={`material-symbols-outlined text-outline-variant text-sm transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
           expand_more
@@ -121,8 +132,8 @@ export default function PhoneInput({ value, onChange, className = "", required, 
                 }`}
                 onClick={() => handleCountrySelect(country)}
               >
-                <span className="text-lg">{country.flag}</span>
-                <span className="font-bold">{country.code}</span>
+                <FlagImg code={country.code} size={20} />
+                <span className="font-bold uppercase">{country.code}</span>
                 <span className="opacity-70">{country.dial}</span>
               </li>
             ))}
