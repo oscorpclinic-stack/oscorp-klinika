@@ -143,7 +143,7 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="mt-auto pt-12 flex gap-6 pb-12 font-label text-sm uppercase tracking-widest border-t border-outline-variant/10">
+          <div className="mt-12 flex gap-6 pb-12 font-label text-sm uppercase tracking-widest">
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Instagram</a>
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">LinkedIn</a>
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Facebook</a>
