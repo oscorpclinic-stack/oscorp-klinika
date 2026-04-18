@@ -143,7 +143,18 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="mt-12 flex gap-6 pb-12 font-label text-sm uppercase tracking-widest">
+          <div className="mt-12 flex flex-col gap-6 pt-10 border-t border-outline-variant/10">
+            <div>
+              <p className="font-label text-sm uppercase tracking-widest text-on-surface-variant/60 mb-1">{t('contact.phoneLabel')}</p>
+              <a href="tel:+994775666555" className="text-2xl font-headline font-bold text-primary">{t('contact.phoneNumber')}</a>
+            </div>
+            <div>
+              <p className="font-label text-sm uppercase tracking-widest text-on-surface-variant/60 mb-1">{t('contact.principal')}</p>
+              <p className="text-base font-body text-on-surface-variant leading-relaxed">{t('contact.avenue')}<br/>{t('contact.city')}</p>
+            </div>
+          </div>
+          
+          <div className="mt-10 flex gap-6 pb-12 font-label text-sm uppercase tracking-widest">
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Instagram</a>
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">LinkedIn</a>
             <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Facebook</a>
