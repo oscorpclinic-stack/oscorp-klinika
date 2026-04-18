@@ -47,7 +47,7 @@ export default function Innovation() {
             <div className="lg:col-span-7">
               <motion.span 
                 variants={itemVariants}
-                className="text-label text-sm uppercase tracking-[0.2em] text-primary-container mb-6 block font-bold"
+                className="text-label text-lg uppercase tracking-[0.2em] text-primary-container mb-6 block font-bold"
               >
                 {t('innovation.label')}
               </motion.span>
@@ -87,7 +87,7 @@ export default function Innovation() {
                 className="absolute -bottom-8 -left-0 md:-left-8 bg-surface p-8 max-w-xs shadow-2xl border border-outline-variant/10 z-10 rounded-2xl"
               >
                 <span className="text-4xl font-headline font-bold text-primary block mb-2">0.01mm</span>
-                <p className="text-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+                <p className="text-label text-sm uppercase tracking-widest text-on-surface-variant font-bold leading-tight">
                   {t('innovation.tolerance')}
                 </p>
               </motion.div>
@@ -143,7 +143,7 @@ export default function Innovation() {
                 <div>
                   <span className="material-symbols-outlined text-3xl text-primary mb-4">precision_manufacturing</span>
                   <h3 className="text-headline text-xl font-bold mb-2 text-emerald-950">{t('innovation.print')}</h3>
-                  <p className="text-body text-base text-on-surface-variant leading-relaxed font-bold">
+                  <p className="text-body text-lg text-on-surface-variant leading-relaxed font-bold">
                     {t('innovation.printDesc')}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default function Innovation() {
                 <div>
                   <span className="material-symbols-outlined text-3xl text-on-primary-container mb-4">computer</span>
                   <h3 className="text-headline text-xl font-bold mb-2">{t('innovation.mill')}</h3>
-                  <p className="text-body text-base opacity-80 leading-relaxed">
+                  <p className="text-body text-lg opacity-80 leading-relaxed font-medium">
                     {t('innovation.millDesc')}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export default function Innovation() {
                 </div>
                 <div className="w-full md:w-2/3">
                   <h3 className="text-headline text-2xl font-bold mb-2 text-emerald-950">{t('innovation.oven')}</h3>
-                  <p className="text-body text-base text-on-surface-variant leading-relaxed font-bold tracking-tight">
+                  <p className="text-body text-lg text-on-surface-variant leading-relaxed font-bold tracking-tight">
                     {t('innovation.ovenDesc')}
                   </p>
                 </div>
@@ -184,21 +184,21 @@ export default function Innovation() {
                 <div className="text-primary font-headline text-5xl font-black">01</div>
                 <div>
                   <h4 className="text-headline text-xl font-bold mb-2 uppercase tracking-wide text-emerald-950">{t('innovation.sameDay')}</h4>
-                  <p className="text-body text-on-surface-variant leading-relaxed">{t('innovation.sameDayDesc')}</p>
+                  <p className="text-body text-lg text-on-surface-variant leading-relaxed">{t('innovation.sameDayDesc')}</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
                 <div className="text-primary font-headline text-5xl font-black">02</div>
                 <div>
                   <h4 className="text-headline text-xl font-bold mb-2 uppercase tracking-wide text-emerald-950">{t('innovation.shade')}</h4>
-                  <p className="text-body text-on-surface-variant leading-relaxed">{t('innovation.shadeDesc')}</p>
+                  <p className="text-body text-lg text-on-surface-variant leading-relaxed">{t('innovation.shadeDesc')}</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start">
                 <div className="text-primary font-headline text-5xl font-black">03</div>
                 <div>
                   <h4 className="text-headline text-xl font-bold mb-2 uppercase tracking-wide text-emerald-950">{t('innovation.perfectFit')}</h4>
-                  <p className="text-body text-on-surface-variant leading-relaxed">{t('innovation.perfectFitDesc')}</p>
+                  <p className="text-body text-lg text-on-surface-variant leading-relaxed">{t('innovation.perfectFitDesc')}</p>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function Innovation() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div className="absolute bottom-8 left-8">
-                <span className="text-surface-bright text-label text-sm uppercase tracking-widest mb-2 block font-bold">
+                <span className="text-surface-bright text-label text-base uppercase tracking-widest mb-2 block font-bold">
                   {t('innovation.qa')}
                 </span>
                 <p className="text-surface-bright font-headline text-2xl font-bold">

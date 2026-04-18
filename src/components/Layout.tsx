@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ConsultationPopup from './ConsultationPopup';
 
 export default function Layout() {
   const location = useLocation();
@@ -11,6 +12,7 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <ConsultationPopup />
       <Navbar />
       <main className="flex-grow">
         <AnimatePresence mode="wait">

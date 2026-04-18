@@ -45,12 +45,12 @@ export default function Services() {
             className="flex flex-col md:flex-row items-start justify-between border-b border-outline-variant/20 pb-12"
           >
             <div className="max-w-3xl">
-              <motion.span variants={itemVariants} className="uppercase tracking-[0.2em] text-xs font-semibold text-primary/60 mb-6 block font-label">{t('services.label')}</motion.span>
+              <motion.span variants={itemVariants} className="uppercase tracking-[0.2em] text-base font-semibold text-primary/60 mb-6 block font-label">{t('services.label')}</motion.span>
               <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl text-primary leading-[0.9] font-headline font-bold" dangerouslySetInnerHTML={{ __html: t('services.title') }}>
               </motion.h1>
             </div>
             <motion.div variants={itemVariants} className="max-w-xs text-right mt-12 md:mt-0">
-              <p className="text-on-surface-variant text-sm leading-relaxed font-body font-medium">
+              <p className="text-on-surface-variant text-lg leading-relaxed font-body font-medium">
                   {t('services.desc')}
               </p>
             </motion.div>
@@ -78,8 +78,8 @@ export default function Services() {
                 <p className="text-surface-variant/90 max-w-lg mb-8 leading-relaxed font-body">
                     {t('services.implantsDesc')}
                 </p>
-                <button className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-[10px] font-bold group-hover:gap-4 transition-all">
-                    {t('services.learnMore')} <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                <button className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-sm font-bold group-hover:gap-4 transition-all">
+                    {t('services.learnMore')} <span className="material-symbols-outlined text-base">arrow_forward</span>
                 </button>
               </div>
             </motion.div>
@@ -97,7 +97,7 @@ export default function Services() {
                   <span className="material-symbols-outlined text-2xl">auto_awesome</span>
                 </div>
                 <h2 className="text-2xl font-headline font-bold text-emerald-950 mb-6">{t('services.aesthetics')}</h2>
-                <p className="text-on-surface-variant font-body text-sm leading-relaxed mb-6 font-medium">
+                <p className="text-on-surface-variant font-body text-lg leading-relaxed mb-6 font-medium">
                     {t('services.aestheticsDesc')}
                 </p>
                 <ul className="space-y-4 mb-12">
@@ -127,10 +127,10 @@ export default function Services() {
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-4xl mb-8">align_items_stretch</span>
                 <h2 className="text-3xl mb-4 font-headline font-bold">{t('services.ortho')}</h2>
-                <p className="text-on-tertiary-container/70 mb-10 text-base leading-relaxed max-w-sm font-medium">
+                <p className="text-on-tertiary-container/70 mb-10 text-lg leading-relaxed max-w-sm font-medium">
                     {t('services.orthoDesc')}
                 </p>
-                <Link className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-sm font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all" to="/contact">
+                <Link className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all" to="/contact">
                     {t('services.viewPathway')}
                 </Link>
               </div>
@@ -149,13 +149,13 @@ export default function Services() {
                   <img className="w-full h-full object-cover opacity-80 rounded-xl hover:scale-110 transition-transform duration-1000" data-alt="Diagnostics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLvRutV0Ra9A5SyoNMNYrjRruk848yqVGhKy0tREur4_6lxCSrhRh_S5LrV891tMchVY2KTpG_0S4LBzqGemPZNWb6UF9rNdIYL3cn50s2HjBaS3Rm_vwhRWqaqw4opi5CZLJA-bxAaQlzZgbzxsLFIHmIyX7e60LT3LJxYwuXKFoAExxKOmeWyo-KMVOeVb_wZ9AiCtompmG7Qxqzv_DdVc_NQfEcvxoO7HofR9jGVWQoeFqcF_llw-Q8IrG7ksYA2YwWHNC5HWY" alt="Scan" />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <span className="text-xs uppercase tracking-[0.3em] font-bold text-primary/50 mb-2 font-label">{t('services.techCore')}</span>
+                  <span className="text-sm uppercase tracking-[0.3em] font-bold text-primary/50 mb-2 font-label">{t('services.techCore')}</span>
                   <h2 className="text-2xl text-emerald-950 font-headline font-bold mb-4">{t('services.diagnostics')}</h2>
-                  <p className="text-on-surface-variant font-body text-sm leading-loose mb-6 font-medium">
+                  <p className="text-on-surface-variant font-body text-lg leading-loose mb-6 font-medium">
                       {t('services.diagnosticsDesc')}
                   </p>
-                  <button className="text-primary text-xs font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                      {t('services.dataSheets')} <span className="material-symbols-outlined text-sm">open_in_new</span>
+                  <button className="text-primary text-base font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
+                      {t('services.dataSheets')} <span className="material-symbols-outlined text-base">open_in_new</span>
                   </button>
                 </div>
               </div>

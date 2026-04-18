@@ -20,6 +20,11 @@ const resources = {
         innovation: { title: "Digital Lab & Clinical Innovation", desc: "In-house digital dentistry laboratory. 3D mapping and CAD/CAM robotics for same-day restorations." },
         contact: { title: "Book Your Consultation", desc: "Start your smile journey at OSCORP. Contact our patient concierge for precise diagnostics and personalized care." }
       },
+      popup: {
+        title: "Elevate Your Perspective",
+        desc: "Schedule a private consultation for elite diagnostics and personalized care.",
+        maybeLater: "Maybe later"
+      },
       footer: {
         description: "A premium sanctuary dedicated to the intersection of oral health and technological precision.",
         sanctuary: "Sanctuary",
@@ -253,6 +258,11 @@ const resources = {
         innovation: { title: "Цифровая Лаборатория и Инновации", desc: "Собственная лаборатория цифровой стоматологии. 3D-картирование и робототехника CAD/CAM для реставраций в тот же день." },
         contact: { title: "Записаться на Консультацию", desc: "Начните путь к улыбке в OSCORP. Свяжитесь с консьержем для точной диагностики и индивидуального ухода." }
       },
+      popup: {
+        title: "Совершенство Начинается Здесь",
+        desc: "Запланируйте частную консультацию для получения высокоточной диагностики и индивидуального плана лечения.",
+        maybeLater: "Возможно, позже"
+      },
       footer: {
         description: "Премиальное пространство, посвященное пересечению здоровья полости рта и технологической точности.",
         sanctuary: "Пространство",
@@ -485,6 +495,11 @@ const resources = {
         laserHub: { title: "Mütərəqqi Lazer Mərkəzi | Candela Pro-U", desc: "Dermatoloji lazer texnologiyasında qızıl standart. Bakıda ağrısız lazer epilyasiyası və dərinin cavanlaşdırılması." },
         innovation: { title: "Rəqəmsal Laboratoriya və İnnovasiyalar", desc: "Daxili rəqəmsal stomatologiya laboratoriyası. Eyni gündə bərpa üçün 3D xəritəçəkmə və CAD/CAM robototexnikası." },
         contact: { title: "Konsultasiya üçün Qeydiyyat", desc: "OSCORP-da gülüş yolunuza başlayın. Dəqiq diaqnostika və fərdi qulluq üçün pasiyent konsyerji ilə əlaqə saxlayın." }
+      },
+      popup: {
+        title: "Mükəmməllik Buradan Başlayır",
+        desc: "Yüksək dəqiqlikli diaqnostika və fərdi müalicə planı üçün özəl konsultasiya təyin edin.",
+        maybeLater: "Bəlkə sonra"
       },
       footer: {
         description: "Ağız sağlamlığı və texnoloji dəqiqliyin kəsişməsinə həsr olunmuş premium məkan.",

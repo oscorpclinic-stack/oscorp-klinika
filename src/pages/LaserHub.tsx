@@ -74,7 +74,7 @@ export default function LaserHub() {
                   <span className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary transition-colors">
                     <span className="material-symbols-outlined group-hover:text-on-primary font-bold">play_arrow</span>
                   </span>
-                  <span className="font-label text-sm uppercase tracking-widest text-emerald-800 font-bold mb-3 block">
+                  <span className="font-label text-lg uppercase tracking-widest text-emerald-800 font-bold mb-4 block">
                     {t('laserHub.targetLabel')}
                   </span>
                 </div>
@@ -128,21 +128,21 @@ export default function LaserHub() {
                 <div>
                   <span className="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-8 transition-colors">face_retouching_natural</span>
                   <h3 className="font-headline text-3xl font-bold mb-4 group-hover:text-on-primary">{t('laserHub.hairTitle')}</h3>
-                  <p className="font-body text-on-surface-variant group-hover:text-on-primary/70 leading-relaxed">
+                  <p className="font-body text-lg text-on-surface-variant group-hover:text-on-primary/70 leading-relaxed font-medium">
                     {t('laserHub.hairDesc')}
                   </p>
                 </div>
                 <div className="mt-20">
                   <ul className="space-y-4 mb-10">
                     {[t('laserHub.hairPoint1'), t('laserHub.hairPoint2'), t('laserHub.hairPoint3')].map((point, i) => (
-                      <li key={i} className="flex items-center gap-3 text-emerald-900/80 font-label text-sm font-bold uppercase tracking-widest mb-4">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span> 
+                      <li key={i} className="flex items-center gap-3 text-emerald-950 font-label text-base font-bold uppercase tracking-widest mb-4">
+                        <span className="w-2 h-2 rounded-full bg-primary/40"></span> 
                         {point}
                       </li>
                     ))}
                   </ul>
                   <div className="pt-8 border-t border-stone-200">
-                    <span className="font-label text-sm uppercase tracking-[0.3em] text-primary font-bold border-b border-primary/20 pb-1 hover:border-primary transition-all cursor-crosshair">
+                    <span className="font-label text-base uppercase tracking-[0.3em] text-primary font-bold border-b border-primary/20 pb-1 hover:border-primary transition-all cursor-crosshair">
                       {t('home.discover')}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export default function LaserHub() {
               <div className="md:col-span-2 bg-secondary-container p-8 md:p-12 flex items-center gap-8 relative overflow-hidden rounded-xl group">
                 <div className="relative z-10 max-w-[60%]">
                   <h3 className="font-headline text-2xl font-bold mb-4 text-emerald-950">{t('laserHub.skinTitle')}</h3>
-                  <p className="font-body text-sm text-on-secondary-container">{t('laserHub.skinDesc')}</p>
+                  <p className="font-body text-lg text-on-secondary-container opacity-80 leading-relaxed font-medium">{t('laserHub.skinDesc')}</p>
                 </div>
                 <div className="absolute right-0 top-0 w-1/3 h-full">
                   <img 
@@ -170,7 +170,7 @@ export default function LaserHub() {
                 <span className="material-symbols-outlined text-on-tertiary-container text-3xl mb-4">monitor_heart</span>
                 <div>
                   <h3 className="font-headline text-lg font-bold text-on-tertiary-container">{t('laserHub.vascularTitle')}</h3>
-                  <p className="font-body text-[10px] text-on-tertiary-container/80 mt-4 leading-relaxed font-bold">
+                  <p className="font-body text-sm text-on-tertiary-container mt-4 leading-relaxed font-bold">
                     {t('laserHub.vascularDesc')}
                   </p>
                 </div>
@@ -181,7 +181,7 @@ export default function LaserHub() {
                 <span className="material-symbols-outlined text-primary text-3xl mb-4">adjust</span>
                 <div>
                   <h3 className="font-headline text-lg font-bold text-emerald-950">{t('laserHub.spotTitle')}</h3>
-                  <p className="font-body text-[10px] text-on-surface-variant mt-4 leading-relaxed font-bold uppercase">
+                  <p className="font-body text-sm text-on-surface-variant mt-4 leading-relaxed font-bold uppercase">
                     {t('laserHub.spotDesc')}
                   </p>
                 </div>
@@ -199,7 +199,7 @@ export default function LaserHub() {
                 <h2 className="text-5xl mb-8 relative z-10 leading-tight">
                   {t('laserHub.comfortTitle')}
                 </h2>
-                <p className="text-stone-500 text-base font-body leading-relaxed">
+                <p className="text-surface/80 text-lg md:text-xl font-body leading-relaxed mb-6">
                   {t('laserHub.targetDesc')}
                 </p>
                 <div className="space-y-12 relative z-10">

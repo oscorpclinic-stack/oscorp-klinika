@@ -108,7 +108,7 @@ export default function Contact() {
           >
             <motion.span 
               variants={itemVariants}
-              className="uppercase tracking-[0.2em] text-primary font-semibold text-xs font-label block"
+              className="uppercase tracking-[0.2em] text-primary font-semibold text-base font-label block"
             >
               {t('contact.label')}
             </motion.span>
@@ -155,8 +155,8 @@ export default function Contact() {
                 <div className="flex items-start gap-4">
                   <span className="material-symbols-outlined text-primary mt-1">location_on</span>
                   <div>
-                    <p className="text-emerald-950 font-medium text-lg leading-tight mb-1">{t('contact.avenue')}</p>
-                    <p className="text-on-surface-variant font-bold">{t('contact.city')}</p>
+                    <p className="text-emerald-950 font-medium text-xl leading-tight mb-1">{t('contact.avenue')}</p>
+                    <p className="text-on-surface-variant font-bold text-lg">{t('contact.city')}</p>
                   </div>
                 </div>
               </div>
@@ -168,15 +168,15 @@ export default function Contact() {
                 {t('contact.hours')}
               </h3>
               <div className="space-y-3">
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-lg">
                   <span className="text-on-surface-variant font-medium">{t('contact.weekdays')}</span>
                   <span className="text-primary font-bold">09:00 — 20:00</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-lg">
                   <span className="text-on-surface-variant font-medium">{t('contact.saturday')}</span>
                   <span className="text-primary font-bold">10:00 — 18:00</span>
                 </div>
-                <div className="flex justify-between items-center text-sm">
+                <div className="flex justify-between items-center text-lg">
                   <span className="text-on-surface-variant font-medium">{t('contact.sunday')}</span>
                   <span className="text-tertiary font-bold italic">{t('contact.appointment')}</span>
                 </div>
@@ -206,10 +206,10 @@ export default function Contact() {
 
             {/* Socials */}
             <div className="pt-8 flex gap-4 flex-wrap">
-              <a className="px-6 py-2 border border-outline-variant/30 rounded-full text-xs font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
+              <a className="px-8 py-3 border border-outline-variant/30 rounded-full text-base font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
                 {t('contact.instagram')}
               </a>
-              <a className="px-6 py-2 border border-outline-variant/30 rounded-full text-xs font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
+              <a className="px-8 py-3 border border-outline-variant/30 rounded-full text-base font-headline font-bold uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors text-primary" href="#">
                 {t('contact.linkedin')}
               </a>
             </div>
@@ -220,7 +220,7 @@ export default function Contact() {
             <div className="bg-surface-container-low p-8 md:p-16 rounded-xl relative overflow-hidden shadow-sm">
               <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
               <h2 className="text-3xl text-emerald-950 mb-2">{t('contact.request')}</h2>
-              <p className="text-on-surface-variant mb-12 text-sm max-w-md">
+              <p className="text-on-surface-variant mb-12 text-lg max-w-md">
                 {t('contact.requestDesc')}
               </p>
               
@@ -249,13 +249,13 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                       <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
                       <input 
                         required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
+                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-6 px-8 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-xl shadow-lg" 
                         placeholder="John Doe" 
                         type="text"
                       />
@@ -352,12 +352,12 @@ export default function Contact() {
                 {t('contact.hubDesc')}
               </p>
               <div className="space-y-2">
-                <p className="text-sm font-headline font-bold uppercase tracking-widest opacity-60">
-                  {t('contact.parking')}
-                </p>
-                <p className="text-sm opacity-90">
-                  {t('contact.parkingDesc')}
-                </p>
+                  <p className="text-base font-headline font-bold uppercase tracking-widest opacity-60">
+                    {t('contact.parking')}
+                  </p>
+                  <p className="text-base opacity-90 leading-relaxed font-medium">
+                    {t('contact.parkingDesc')}
+                  </p>
               </div>
             </div>
             <div className="lg:col-span-3 h-[500px] bg-surface-container-high relative">
