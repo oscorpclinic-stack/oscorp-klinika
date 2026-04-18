@@ -37,12 +37,12 @@ export default function Home() {
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="w-full h-full object-cover object-center" 
+              className="w-full h-full object-cover object-right lg:object-center" 
               data-alt="Ultra-modern clinical interior" 
               src="/hero-banner.svg"
               alt="OSCORP Exterior"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-surface via-surface/80 lg:via-surface/60 to-transparent"></div>
           </div>
           
           <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-12 w-full">
