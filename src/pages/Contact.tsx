@@ -15,7 +15,7 @@ export default function Contact() {
             <span className="uppercase tracking-[0.2em] text-primary font-semibold text-xs font-label">
               {t('contact.label')}
             </span>
-            <h1 className="text-5xl md:text-7xl leading-[0.9] text-emerald-950">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl leading-[1.1] md:leading-[0.9] text-emerald-950 break-words">
               {t('contact.title1')} <br/> 
               <span className="text-outline-variant/30">{t('contact.title2')}</span>
             </h1>
