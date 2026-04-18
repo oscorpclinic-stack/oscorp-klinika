@@ -161,8 +161,8 @@ export default function Innovation() {
 
               {/* Ceramic Oven */}
               <div className="md:col-span-2 bg-surface p-8 flex flex-col md:flex-row gap-8 items-center border border-outline-variant/10 rounded-xl">
-                <div className="w-full md:w-1/3 aspect-square bg-tertiary-container/10 flex items-center justify-center rounded-lg">
-                  <span className="material-symbols-outlined text-6xl text-primary">local_fire_department</span>
+                <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-square overflow-hidden rounded-lg bg-surface-container-low">
+                  <img src="/vita.jpg" alt="VITA Ceramic Ovens" className="w-full h-full object-cover" />
                 </div>
                 <div className="w-full md:w-2/3">
                   <h3 className="text-headline text-2xl font-bold mb-2 text-emerald-950">{t('innovation.oven')}</h3>
