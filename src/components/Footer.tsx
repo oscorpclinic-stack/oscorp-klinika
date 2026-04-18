@@ -48,12 +48,12 @@ export default function Footer() {
         </div>
         <div className="border-t border-stone-200 dark:border-stone-800">
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-stone-400 font-label text-xs uppercase tracking-widest">
+                <p className="text-stone-400 font-label text-sm uppercase tracking-widest">
                     {t('footer.copyright')}
                 </p>
                 <div className="flex gap-6">
-                    <a href="#" className="text-stone-400 hover:text-emerald-700 transition-colors uppercase font-label text-[10px] tracking-widest">Instagram</a>
-                    <a href="#" className="text-stone-400 hover:text-emerald-700 transition-colors uppercase font-label text-[10px] tracking-widest">LinkedIn</a>
+                    <a href="#" className="text-stone-400 hover:text-emerald-700 transition-colors uppercase font-label text-sm tracking-widest">Instagram</a>
+                    <a href="#" className="text-stone-400 hover:text-emerald-700 transition-colors uppercase font-label text-sm tracking-widest">LinkedIn</a>
                 </div>
             </div>
         </div>

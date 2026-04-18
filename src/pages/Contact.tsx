@@ -250,7 +250,7 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="flex flex-col gap-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
+                      <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.name')}</label>
                       <input 
                         required
                         value={name}
@@ -261,7 +261,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.email')}</label>
+                      <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.email')}</label>
                       <input 
                         required
                         value={email}
@@ -275,7 +275,7 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-2">
-                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
+                      <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
                       <input 
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
@@ -285,7 +285,7 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.interest')}</label>
+                      <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.interest')}</label>
                       <CustomSelect 
                         options={[
                           { label: t('contact.option1'), value: "laser" },
@@ -301,7 +301,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.notes')}</label>
+                    <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.notes')}</label>
                     <textarea 
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
@@ -312,7 +312,7 @@ export default function Contact() {
                   </div>
 
                   {error && (
-                    <p className="text-red-500 text-xs font-medium bg-red-50 p-4 rounded-lg border border-red-100 flex items-center gap-2">
+                    <p className="text-red-500 text-sm font-medium bg-red-50 p-4 rounded-lg border border-red-100 flex items-center gap-2">
                       <span className="material-symbols-outlined text-sm">error</span>
                       {error}
                     </p>
@@ -333,7 +333,7 @@ export default function Contact() {
                         t('contact.submit')
                       )}
                     </button>
-                    <p className="text-center mt-6 text-[10px] text-outline-variant uppercase tracking-widest font-bold">
+                    <p className="text-center mt-6 text-sm text-outline-variant uppercase tracking-widest font-bold">
                       {t('contact.encrypted')}
                     </p>
                   </div>

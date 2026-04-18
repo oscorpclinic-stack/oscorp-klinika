@@ -84,7 +84,7 @@ export default function Home() {
             >
               <motion.span 
                 variants={itemVariants}
-                className="inline-block label-md text-primary font-semibold tracking-[0.2em] uppercase mb-4"
+                className="inline-block text-sm md:text-base text-primary font-semibold tracking-[0.2em] uppercase mb-4"
               >
                 {t('home.heroLabel')}
               </motion.span>
@@ -102,12 +102,12 @@ export default function Home() {
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
                 <Link to="/contact#booking-form">
-                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
+                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm md:text-base uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
                   {t('home.freeConsultation')}
                 </button>
               </Link>
                 <Link to="/innovation">
-                  <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm uppercase tracking-widest leading-tight active:scale-95">
+                  <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm md:text-base uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.ourTechnology')}
                   </button>
                 </Link>
@@ -130,7 +130,7 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl mb-4 font-headline font-bold text-emerald-950">{t('home.servicesTitle')}</h2>
                 <p className="text-on-surface-variant font-body text-lg leading-relaxed">{t('home.servicesDesc')}</p>
               </div>
-              <Link to="/services" className="text-primary font-semibold border-b-2 border-primary/20 pb-2 hover:border-primary transition-all font-headline uppercase tracking-widest text-xs">
+              <Link to="/services" className="text-primary font-semibold border-b-2 border-primary/20 pb-2 hover:border-primary transition-all font-headline uppercase tracking-widest text-sm">
                 {t('home.proceduresLink')}
               </Link>
             </motion.div>
@@ -155,7 +155,7 @@ export default function Home() {
                     <span className="material-symbols-outlined text-3xl">{service.icon}</span>
                   </div>
                   <h3 className="font-headline text-xl font-bold mb-3 text-emerald-950">{service.title}</h3>
-                  <p className="text-sm text-on-surface-variant leading-relaxed font-body font-medium">{service.desc}</p>
+                  <p className="text-sm md:text-base text-on-surface-variant leading-relaxed font-body font-medium">{service.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -174,8 +174,8 @@ export default function Home() {
                 alt="Candela Laser"
               />
               <div className="absolute bottom-6 right-6 z-20 bg-primary-container/80 backdrop-blur-md p-6 rounded-lg max-w-xs border border-white/10">
-                <p className="text-xs font-label uppercase tracking-widest text-on-primary-container mb-2 font-bold">{t('home.coolingLabel')}</p>
-                <p className="text-sm font-body">{t('home.coolingDesc')}</p>
+                <p className="text-sm font-label uppercase tracking-widest text-on-primary-container mb-2 font-bold">{t('home.coolingLabel')}</p>
+                <p className="text-sm md:text-base font-body">{t('home.coolingDesc')}</p>
               </div>
             </div>
             <div>

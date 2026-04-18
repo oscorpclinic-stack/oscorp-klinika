@@ -127,10 +127,10 @@ export default function Services() {
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-4xl mb-8">align_items_stretch</span>
                 <h2 className="text-3xl mb-4 font-headline font-bold">{t('services.ortho')}</h2>
-                <p className="text-on-tertiary-container/70 mb-10 text-sm leading-relaxed max-w-sm font-medium">
+                <p className="text-on-tertiary-container/70 mb-10 text-base leading-relaxed max-w-sm font-medium">
                     {t('services.orthoDesc')}
                 </p>
-                <Link className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-xs font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all" to="/contact">
+                <Link className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-sm font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all" to="/contact">
                     {t('services.viewPathway')}
                 </Link>
               </div>
@@ -149,13 +149,13 @@ export default function Services() {
                   <img className="w-full h-full object-cover opacity-80 rounded-xl hover:scale-110 transition-transform duration-1000" data-alt="Diagnostics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwLvRutV0Ra9A5SyoNMNYrjRruk848yqVGhKy0tREur4_6lxCSrhRh_S5LrV891tMchVY2KTpG_0S4LBzqGemPZNWb6UF9rNdIYL3cn50s2HjBaS3Rm_vwhRWqaqw4opi5CZLJA-bxAaQlzZgbzxsLFIHmIyX7e60LT3LJxYwuXKFoAExxKOmeWyo-KMVOeVb_wZ9AiCtompmG7Qxqzv_DdVc_NQfEcvxoO7HofR9jGVWQoeFqcF_llw-Q8IrG7ksYA2YwWHNC5HWY" alt="Scan" />
                 </div>
                 <div className="flex flex-col justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-primary/50 mb-2 font-label">{t('services.techCore')}</span>
+                  <span className="text-xs uppercase tracking-[0.3em] font-bold text-primary/50 mb-2 font-label">{t('services.techCore')}</span>
                   <h2 className="text-2xl text-emerald-950 font-headline font-bold mb-4">{t('services.diagnostics')}</h2>
-                  <p className="text-on-surface-variant font-body text-xs leading-loose mb-6 font-medium">
+                  <p className="text-on-surface-variant font-body text-sm leading-loose mb-6 font-medium">
                       {t('services.diagnosticsDesc')}
                   </p>
-                  <button className="text-primary text-[10px] font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                      {t('services.dataSheets')} <span className="material-symbols-outlined text-xs">open_in_new</span>
+                  <button className="text-primary text-xs font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
+                      {t('services.dataSheets')} <span className="material-symbols-outlined text-sm">open_in_new</span>
                   </button>
                 </div>
               </div>

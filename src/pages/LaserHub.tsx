@@ -47,7 +47,7 @@ export default function LaserHub() {
             <div className="md:col-span-12 lg:col-span-7 z-10">
               <motion.span 
                 variants={itemVariants}
-                className="inline-block font-label text-xs font-semibold uppercase tracking-[0.3em] text-primary mb-6"
+                className="inline-block font-label text-sm font-semibold uppercase tracking-[0.3em] text-primary mb-6"
               >
                 {t('laserHub.heroLabel')}
               </motion.span>
@@ -74,8 +74,8 @@ export default function LaserHub() {
                   <span className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary transition-colors">
                     <span className="material-symbols-outlined group-hover:text-on-primary font-bold">play_arrow</span>
                   </span>
-                  <span className="font-label text-xs uppercase tracking-widest font-bold text-primary">
-                    {t('laserHub.watchTech')}
+                  <span className="font-label text-sm uppercase tracking-widest text-emerald-800 font-bold mb-3 block">
+                    {t('laserHub.targetLabel')}
                   </span>
                 </div>
               </motion.div>
@@ -112,8 +112,8 @@ export default function LaserHub() {
           <div className="max-w-[1440px] mx-auto">
             <div className="flex justify-between items-end mb-20 gap-8">
               <div className="max-w-2xl">
-                <h2 className="text-4xl md:text-5xl text-emerald-950 mb-4">{t('laserHub.protocolTitle')}</h2>
-                <p className="font-body text-on-surface-variant">{t('laserHub.protocolDesc')}</p>
+                <h6 className="font-headline font-bold text-emerald-950 mb-2">{t('laserHub.techTitle')}</h6>
+                <p className="text-stone-500 text-sm font-body leading-relaxed">{t('laserHub.techDesc')}</p>
               </div>
               <div className="hidden md:block">
                 <span className="font-label text-xs uppercase tracking-[0.5em] opacity-30 [writing-mode:vertical-rl] h-32 text-primary font-bold">
@@ -135,15 +135,17 @@ export default function LaserHub() {
                 <div className="mt-20">
                   <ul className="space-y-4 mb-10">
                     {[t('laserHub.hairPoint1'), t('laserHub.hairPoint2'), t('laserHub.hairPoint3')].map((point, i) => (
-                      <li key={i} className="flex items-center gap-3 text-xs uppercase tracking-widest font-bold group-hover:text-on-primary">
-                        <span className="w-1.5 h-1.5 bg-primary group-hover:bg-on-primary rounded-full"></span> 
+                      <li key={i} className="flex items-center gap-3 text-emerald-900/80 font-label text-sm font-bold uppercase tracking-widest mb-4">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/40"></span> 
                         {point}
                       </li>
                     ))}
                   </ul>
-                  <Link className="font-label text-xs uppercase tracking-widest border-b border-primary group-hover:border-on-primary group-hover:text-on-primary transition-all pb-1" to="/contact">
-                    {t('home.discover')}
-                  </Link>
+                  <div className="pt-8 border-t border-stone-200">
+                    <span className="font-label text-sm uppercase tracking-[0.3em] text-primary font-bold border-b border-primary/20 pb-1 hover:border-primary transition-all cursor-crosshair">
+                      {t('home.discover')}
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -197,6 +199,9 @@ export default function LaserHub() {
                 <h2 className="text-5xl mb-8 relative z-10 leading-tight">
                   {t('laserHub.comfortTitle')}
                 </h2>
+                <p className="text-stone-500 text-base font-body leading-relaxed">
+                  {t('laserHub.targetDesc')}
+                </p>
                 <div className="space-y-12 relative z-10">
                   <div className="flex gap-6">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full border border-on-primary/20 flex items-center justify-center">

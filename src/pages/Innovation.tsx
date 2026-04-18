@@ -143,7 +143,7 @@ export default function Innovation() {
                 <div>
                   <span className="material-symbols-outlined text-3xl text-primary mb-4">precision_manufacturing</span>
                   <h3 className="text-headline text-xl font-bold mb-2 text-emerald-950">{t('innovation.print')}</h3>
-                  <p className="text-body text-sm text-on-surface-variant leading-relaxed font-bold">
+                  <p className="text-body text-base text-on-surface-variant leading-relaxed font-bold">
                     {t('innovation.printDesc')}
                   </p>
                 </div>
@@ -154,7 +154,7 @@ export default function Innovation() {
                 <div>
                   <span className="material-symbols-outlined text-3xl text-on-primary-container mb-4">computer</span>
                   <h3 className="text-headline text-xl font-bold mb-2">{t('innovation.mill')}</h3>
-                  <p className="text-body text-sm opacity-80 leading-relaxed">
+                  <p className="text-body text-base opacity-80 leading-relaxed">
                     {t('innovation.millDesc')}
                   </p>
                 </div>
@@ -167,7 +167,7 @@ export default function Innovation() {
                 </div>
                 <div className="w-full md:w-2/3">
                   <h3 className="text-headline text-2xl font-bold mb-2 text-emerald-950">{t('innovation.oven')}</h3>
-                  <p className="text-body text-sm text-on-surface-variant leading-relaxed font-bold tracking-tight">
+                  <p className="text-body text-base text-on-surface-variant leading-relaxed font-bold tracking-tight">
                     {t('innovation.ovenDesc')}
                   </p>
                 </div>
@@ -214,7 +214,7 @@ export default function Innovation() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
               <div className="absolute bottom-8 left-8">
-                <span className="text-surface-bright text-label text-xs uppercase tracking-widest mb-2 block font-bold">
+                <span className="text-surface-bright text-label text-sm uppercase tracking-widest mb-2 block font-bold">
                   {t('innovation.qa')}
                 </span>
                 <p className="text-surface-bright font-headline text-2xl font-bold">
