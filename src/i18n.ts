@@ -682,11 +682,22 @@ const resources = {
   }
 };
 
+// Language detection logic
+const getInitialLanguage = () => {
+  const savedLng = localStorage.getItem('i18nextLng');
+  if (savedLng && ['en', 'ru', 'az'].includes(savedLng)) return savedLng;
+
+  const browserLng = navigator.language.split('-')[0];
+  if (['en', 'ru', 'az'].includes(browserLng)) return browserLng;
+
+  return 'en';
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: localStorage.getItem('i18nextLng') || 'en', // Default language
+    lng: getInitialLanguage(),
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false 
