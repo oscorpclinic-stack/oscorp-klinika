@@ -74,9 +74,12 @@ const resources = {
         sculptDesc: "Using advanced CAD/CAM workflows to design the perfect tooth morphology tailored to your facial structure.",
         ovenTitle: "The Ceramic Oven",
         ovenDesc: "Master technicians applying artisanal finishes to high-strength zirconium and ceramic veneers.",
-        labTitle: "Zero Compromise Quality",
-        labDesc: "By managing the entire manufacturing process on-site, we guarantee the highest material purity and aesthetic perfection in Baku.",
-        labButton: "Tour the Laboratory"
+        labTitle: "The Art of Precision",
+        labDesc: "Our in-house laboratory is the heart of OSCORP—a workshop where creative intuition meets micron-level precision. By managing the entire manufacturing cycle on-site, we transform high-strength ceramics into unique pieces of biological architecture.",
+        labButton: "Tour the Laboratory",
+        brandPhilosophyLabel: "Design Identity",
+        brandPhilosophyTitle: "Technological Luxury",
+        brandPhilosophyDesc: "The result of meticulous collaboration where every hue and typeface is selected to reflect our commitment to clinical excellence."
       },
       services: {
         label: "Precision Dentistry",
@@ -158,8 +161,8 @@ const resources = {
       },
       innovation: {
         label: "The Future of Precision",
-        title: "The In-House Laboratory.",
-        desc: "By integrating a world-class dental laboratory directly within our clinic, we eliminate margins of error and drastically reduce patient wait times. Total control over every micron.",
+        title: "The Workshop of Creation.",
+        desc: "An in-house sanctuary where 'creative disorder' fuels structural perfection. By integrating a world-class laboratory directly into our flow, we achieve total control over every micron, crafting restorations as unique as your DNA.",
         tolerance: "Tolerance threshold for our CAD/CAM restorations",
         ecoTitle: "Precision Ecosystem",
         scan: "Intraoral 3D Scanning",
@@ -294,9 +297,12 @@ const resources = {
         sculptDesc: "Использование передовых рабочих процессов CAD/CAM для создания идеальной морфологии зубов, адаптированной к структуре вашего лица.",
         ovenTitle: "Керамическая Печь",
         ovenDesc: "Мастера-техники наносят художественную отделку на высокопрочный цирконий и керамические виниры.",
-        labTitle: "Качество без Компромиссов",
-        labDesc: "Управляя всем процессом производства на месте, мы гарантируем высочайшую чистоту материалов и эстетическое совершенство в Баку.",
-        labButton: "Посетить Лабораторию"
+        labTitle: "Искусство Точности",
+        labDesc: "Наша внутренняя лаборатория — это сердце OSCORP: мастерская, где творческая интуиция встречается с микронной точностью. Управляя полным циклом на месте, мы превращаем высокопрочную керамику в уникальные объекты биологической архитектуры.",
+        labButton: "Посетить Лабораторию",
+        brandPhilosophyLabel: "Идентичность Бренда",
+        brandPhilosophyTitle: "Технологическая Роскошь",
+        brandPhilosophyDesc: "Результат тщательного сотрудничества, где каждый оттенок и шрифт выбраны, чтобы отразить нашу приверженность клиническому совершенству."
       },
       services: {
         label: "Высокоточная Стоматология",
@@ -378,8 +384,8 @@ const resources = {
       },
       innovation: {
         label: "Будущее Системной Точности",
-        title: "Внутренняя Лаборатория.",
-        desc: "Внедряя стоматологическую лабораторию мирового класса непосредственно в нашей клинике, мы исключаем возможность возникновения погрешностей и радикально сокращаем время ожидания пациента. Тотальный контроль над каждым микроном.",
+        title: "Мастерская Создания.",
+        desc: "Внутреннее пространство, где «творческий беспорядок» питает структурное совершенство. Интегрируя лабораторию мирового класса в наш процесс, мы получаем тотальный контроль над каждым микроном, создавая реставрации, уникальные как ваша ДНК.",
         tolerance: "Критический порог допуска для наших CAD/CAM реставраций",
         ecoTitle: "Экосистема Точности",
         scan: "Внутриротовое 3D-Сканирование",
@@ -514,9 +520,12 @@ const resources = {
         sculptDesc: "Üz quruluşunuza uyğunlaşdırılmış mükəmməl diş morfologiyasını dizayn etmək üçün qabaqcıl CAD/CAM iş axınlarından istifadə.",
         ovenTitle: "Keramika Sobası",
         ovenDesc: "Usta texniklər yüksək möhkəmlikli sirkon və keramika vinirlərə bədii toxunuşlar edirlər.",
-        labTitle: "Keyfiyyətdə Kompromissiz",
-        labDesc: "Bütün istehsal prosesini yerində idarə etməklə biz Bakıda ən yüksək material saflığına və estetik mükəmməlliyə zəmanət veririk.",
-        labButton: "Laboratoriyaya Tur"
+        labTitle: "Dəqiqlik Sənəti",
+        labDesc: "Daxili laboratoriyamız OSCORP-un ürəyidir — yaradıcı intuisiya və mikron səviyyəsində dəqiqliyin qovuşduğu emalatxana. Bütün istehsal dövrünü yerində idarə edərək, biz yüksək davamlı keramikaları unikal bioloji memarlıq nümunələrinə çeviririk.",
+        labButton: "Laboratoriyaya Tur",
+        brandPhilosophyLabel: "Brend Kimliyi",
+        brandPhilosophyTitle: "Texnoloji Lüks",
+        brandPhilosophyDesc: "Klinik mükəmməlliyə olan sadiqliyimizi əks etdirmək üçün hər bir çaların və şriftin diqqətlə seçildiyi titiz əməkdaşlığın nəticəsi."
       },
       services: {
         label: "Yüksək Dəqiqlik Stomatologiyası",
@@ -598,8 +607,8 @@ const resources = {
       },
       innovation: {
         label: "Dəqiqliyin Gələcəyi",
-        title: "Daxili Laboratoriya.",
-        desc: "Dünya standartlarına uyğun stomatoloji laboratoriyanı bilavasitə klinikamıza inteqrasiya edərək, biz xətaları aradan qaldırır və pasiyentlərin gözləmə müddətini xeyli dərəcədə azaldırıq. Hər bir mikron üzərində tam nəzarət.",
+        title: "Yaradılış Emalatxanası.",
+        desc: "Struktur mükəmməlliyi qidalandıran 'yaradıcı xaosun' hökm sürdüyü daxili məkan. Dünya səviyyəli laboratoriyanı birbaşa prosesimizə inteqrasiya edərək, hər bir mikrona tam nəzarət edir, DNT-niz qədər unikal restavrasiyalar hazırlayırıq.",
         tolerance: "CAD/CAM bərpa işlərimiz üçün kritik dözümlülük həddi",
         ecoTitle: "Dəqiqlik Ekosistemi",
         scan: "Ağız İçi 3D Skan",

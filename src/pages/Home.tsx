@@ -171,6 +171,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Brand Philosophy - Squeezing in the Brandbook intent */}
+        <section className="py-24 bg-surface border-y border-outline-variant/10">
+          <div className="max-w-[1920px] mx-auto px-6 md:px-12">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center text-center max-w-4xl mx-auto"
+            >
+              <span className="text-xs font-bold font-headline uppercase tracking-[0.3em] text-primary mb-6">
+                {t('home.brandPhilosophyLabel')}
+              </span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-10 tracking-tight text-emerald-950">
+                {t('home.brandPhilosophyTitle')}
+              </h2>
+              <div className="w-24 h-[1px] bg-primary/30 mb-10"></div>
+              <p className="text-xl md:text-2xl text-on-surface-variant leading-relaxed font-body font-light italic">
+                "{t('home.brandPhilosophyDesc')}"
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Innovation Hub */}
         <section className="py-32 bg-surface-container-lowest">
           <div className="max-w-[1920px] mx-auto px-6 md:px-12">
