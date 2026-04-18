@@ -72,11 +72,11 @@ export default function Home() {
                 {t('home.heroDesc')}
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-                <Link to="/contact">
-                  <button className="bg-primary text-on-primary px-8 lg:px-10 py-6 rounded-full font-semibold shadow-lg hover:shadow-primary/20 transition-all font-label text-sm uppercase tracking-widest leading-tight active:scale-95">
-                    {t('home.freeConsultation')}
-                  </button>
-                </Link>
+                <Link to="/contact#booking-form">
+                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
+                  {t('home.freeConsultation')}
+                </button>
+              </Link>
                 <Link to="/innovation">
                   <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.ourTechnology')}
@@ -242,7 +242,7 @@ export default function Home() {
 
         {/* Sticky CTA */}
         <div className="fixed bottom-8 right-8 z-[60]">
-          <Link to="/contact">
+          <Link to="/contact#booking-form">
             <button className="bg-primary text-on-primary shadow-2xl rounded-full px-6 py-4 flex items-center gap-3 hover:scale-105 active:scale-95 transition-all group border border-white/20">
               <span className="material-symbols-outlined fill-icon group-hover:rotate-12 transition-transform">calendar_month</span>
               <span className="font-bold text-sm font-label uppercase tracking-widest">{t('home.bookConsultation')}</span>

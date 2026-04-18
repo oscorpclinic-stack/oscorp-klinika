@@ -237,8 +237,8 @@ export default function LaserHub() {
               {t('laserHub.scheduleTitle')}
             </h2>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-12 py-6 rounded-full font-label tracking-widest text-sm uppercase font-bold hover:shadow-2xl transition-all leading-tight">
+              <Link to="/contact#booking-form">
+                <button className="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
                   {t('laserHub.bookNow')}
                 </button>
               </Link>

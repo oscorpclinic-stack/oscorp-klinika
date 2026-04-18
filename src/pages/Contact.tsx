@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CustomSelect from '../components/CustomSelect';
 
@@ -7,6 +8,7 @@ import { supabase } from '../lib/supabase';
 
 export default function Contact() {
   const { t } = useTranslation();
+  const { hash } = useLocation();
   const [selectedService, setSelectedService] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,6 +17,17 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (hash === '#booking-form') {
+      const element = document.getElementById('booking-form');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -197,7 +210,7 @@ export default function Contact() {
           </div>
 
           {/* Booking Form Card */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7" id="booking-form">
             <div className="bg-surface-container-low p-8 md:p-16 rounded-xl relative overflow-hidden shadow-sm">
               <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
               <h2 className="text-3xl text-emerald-950 mb-2">{t('contact.request')}</h2>

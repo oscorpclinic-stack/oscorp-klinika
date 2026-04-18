@@ -229,8 +229,8 @@ export default function Innovation() {
               {t('innovation.ctaDesc')}
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
-              <Link to="/contact">
-                <button className="bg-surface-bright text-primary rounded-full px-12 py-6 font-label text-sm uppercase tracking-widest font-bold hover:shadow-2xl transition-all leading-tight">
+              <Link to="/contact#booking-form">
+                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
                   {t('innovation.schedule')}
                 </button>
               </Link>

@@ -210,9 +210,9 @@ export default function Services() {
           >
             <h2 className="text-4xl md:text-6xl text-primary mb-12 font-headline font-bold">{t('services.ctaTitle')}</h2>
             <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Link to="/contact">
-                <button className="bg-primary text-on-primary px-12 py-7 w-full md:w-auto rounded-full font-label text-[10px] font-bold tracking-[0.3em] uppercase hover:shadow-2xl hover:bg-emerald-950 transition-all leading-tight active:scale-95">
-                    {t('services.requestAudit')}
+              <Link to="/contact#booking-form">
+                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
+                  {t('services.requestAudit')}
                 </button>
               </Link>
             </div>
