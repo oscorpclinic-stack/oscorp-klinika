@@ -60,7 +60,7 @@ export default function Home() {
       </script>
       <main className="pt-16 lg:pt-0">
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] lg:min-h-screen flex items-start pt-8 lg:items-center lg:pt-0 overflow-hidden">
+        <section className="relative min-h-[85vh] lg:min-h-screen flex items-start pt-24 lg:items-center lg:pt-0 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <motion.img 
               initial={{ scale: 1.1, opacity: 0 }}
@@ -101,12 +101,6 @@ export default function Home() {
                 {t('home.heroDesc')}
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-                <button 
-                  onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
-                  className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm md:text-base uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20"
-                >
-                  {t('home.freeConsultation')}
-                </button>
                 <Link to="/innovation">
                   <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm md:text-base uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.ourTechnology')}
