@@ -37,7 +37,7 @@ export default function Home() {
               initial={{ scale: 1.1, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="w-full h-full object-cover object-right lg:object-center" 
+              className="w-full h-full object-cover object-[85%_center] lg:object-[60%_center]" 
               data-alt="Ultra-modern clinical interior" 
               src="/hero-banner.svg"
               alt="OSCORP Exterior"
