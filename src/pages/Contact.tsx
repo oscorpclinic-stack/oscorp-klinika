@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import CustomSelect from '../components/CustomSelect';
+import PhoneInput from '../components/PhoneInput';
 import SEO from '../components/SEO';
 
 import { supabase } from '../lib/supabase';
@@ -276,12 +277,9 @@ export default function Contact() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="space-y-2">
                       <label className="text-sm font-headline font-bold uppercase tracking-widest text-primary mb-1 block">{t('contact.phoneLabel')}</label>
-                      <input 
+                      <PhoneInput
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-4.5 px-6 focus:ring-1 focus:ring-primary text-emerald-950 transition-all placeholder:text-outline-variant/30 font-medium outline-none text-base" 
-                        placeholder="+994 -- --- -- --" 
-                        type="tel"
+                        onChange={setPhone}
                       />
                     </div>
                     <div className="space-y-2">

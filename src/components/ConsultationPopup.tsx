@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '../lib/supabase';
 import CustomSelect from './CustomSelect';
+import PhoneInput from './PhoneInput';
 
 export default function ConsultationPopup() {
   const { t } = useTranslation();
@@ -155,12 +156,11 @@ export default function ConsultationPopup() {
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-[10px] font-headline font-bold uppercase tracking-widest text-primary block ml-1">{t('contact.phoneLabel')}</label>
-                        <input 
+                        <PhoneInput
                           required
                           value={phone}
-                          onChange={(e) => setPhone(e.target.value)}
-                          className="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl py-3 px-5 focus:ring-1 focus:ring-primary outline-none transition-all text-base font-medium"
-                          placeholder="+994 -- --- -- --"
+                          onChange={setPhone}
+                          compact
                         />
                       </div>
                     </div>
