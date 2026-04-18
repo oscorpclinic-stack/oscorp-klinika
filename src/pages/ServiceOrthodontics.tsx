@@ -55,7 +55,7 @@ export default function ServiceOrthodontics() {
             className="w-full relative rounded-[2rem] overflow-hidden aspect-[16/9] md:aspect-[21/9]"
           >
             <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent z-10 mix-blend-multiply"></div>
-            <img className="w-full h-full object-cover zoom-effect" src="https://images.unsplash.com/photo-1598256989481-28562308eab9?q=80&w=2670&auto=format&fit=crop" alt="Orthodontics" />
+            <img className="w-full h-full object-cover zoom-effect" src="/clinical_excellence.png" alt="Orthodontics" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-24">

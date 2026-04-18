@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 export default function Services() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const containerVariants: any = {
     hidden: { opacity: 0, y: 30 },
@@ -66,7 +67,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="col-span-12 md:col-span-8 bg-surface-container-low rounded-[2rem] overflow-hidden group relative flex flex-col justify-end p-8 md:p-12 min-h-[400px] md:min-h-[600px] shadow-sm border border-outline-variant/10"
+              onClick={() => navigate('/services/implants')}
+              className="col-span-12 md:col-span-8 bg-surface-container-low rounded-[2rem] overflow-hidden group relative flex flex-col justify-end p-8 md:p-12 min-h-[400px] md:min-h-[600px] shadow-sm border border-outline-variant/10 cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent z-10 opacity-70 transition-opacity group-hover:opacity-80"></div>
               <img className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" data-alt="Implants" src="/implantdisnedir.jpg" alt="Implants" />
@@ -78,11 +80,9 @@ export default function Services() {
                 <p className="text-surface-variant/90 max-w-lg mb-8 leading-relaxed font-body">
                     {t('services.implantsDesc')}
                 </p>
-                <Link to="/services/implants">
-                  <button className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-sm font-bold group-hover:gap-4 transition-all">
-                      {t('services.learnMore')} <span className="material-symbols-outlined text-base">arrow_forward</span>
-                  </button>
-                </Link>
+                <div className="flex items-center gap-2 text-surface-bright uppercase tracking-widest text-sm font-bold group-hover:gap-4 transition-all w-fit">
+                    {t('services.learnMore')} <span className="material-symbols-outlined text-base">arrow_forward</span>
+                </div>
               </div>
             </motion.div>
 
@@ -92,7 +92,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="col-span-12 md:col-span-4 bg-surface-container-highest rounded-[2rem] p-8 md:p-10 flex flex-col justify-between border border-outline-variant/10 group hover:shadow-2xl transition-all"
+              onClick={() => navigate('/services/aesthetics')}
+              className="col-span-12 md:col-span-4 bg-surface-container-highest rounded-[2rem] p-8 md:p-10 flex flex-col justify-between border border-outline-variant/10 group hover:shadow-2xl transition-all cursor-pointer"
             >
               <div>
                 <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center mb-8 text-on-primary shadow-lg transition-transform group-hover:rotate-12">
@@ -110,11 +111,9 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
-              <Link to="/services/aesthetics" className="w-full">
-                <button className="w-full border border-outline-variant/20 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all duration-300">
-                    {t('services.exploreArtistry')}
-                </button>
-              </Link>
+              <div className="w-full text-center border border-outline-variant/20 py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] group-hover:bg-primary group-hover:text-on-primary transition-all duration-300">
+                  {t('services.exploreArtistry')}
+              </div>
             </motion.div>
 
             {/* Service 3: Orthodontics (Wide Secondary) */}
@@ -123,7 +122,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="col-span-12 md:col-span-6 bg-tertiary-container rounded-[2rem] p-8 md:p-12 text-on-tertiary-container relative overflow-hidden group"
+              onClick={() => navigate('/services/orthodontics')}
+              className="col-span-12 md:col-span-6 bg-tertiary-container rounded-[2rem] p-8 md:p-12 text-on-tertiary-container relative overflow-hidden group cursor-pointer"
             >
               <div className="absolute -right-20 -bottom-20 opacity-10 transition-transform group-hover:scale-110 duration-1000">
                 <span className="material-symbols-outlined text-[300px]">architecture</span>
@@ -134,11 +134,9 @@ export default function Services() {
                 <p className="text-on-tertiary-container/70 mb-10 text-lg leading-relaxed max-w-sm font-medium">
                     {t('services.orthoDesc')}
                 </p>
-                <Link to="/services/orthodontics">
-                  <button className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all">
-                      {t('services.viewPathway')}
-                  </button>
-                </Link>
+                <div className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest group-hover:border-on-tertiary-container transition-all w-fit">
+                    {t('services.viewPathway')}
+                </div>
               </div>
             </motion.div>
 
@@ -148,7 +146,8 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="col-span-12 md:col-span-6 bg-surface-container-low rounded-[2rem] p-8 md:p-12 flex items-center border border-outline-variant/10 shadow-sm"
+              onClick={() => navigate('/services/diagnostics')}
+              className="col-span-12 md:col-span-6 bg-surface-container-low rounded-[2rem] p-8 md:p-12 flex items-center border border-outline-variant/10 shadow-sm cursor-pointer group"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
                 <div className="aspect-square bg-surface rounded-2xl flex items-center justify-center p-8 border border-outline-variant/10 shadow-inner overflow-hidden">
@@ -160,11 +159,9 @@ export default function Services() {
                   <p className="text-on-surface-variant font-body text-lg leading-loose mb-6 font-medium">
                       {t('services.diagnosticsDesc')}
                   </p>
-                  <Link to="/services/diagnostics">
-                    <button className="text-primary text-base font-extrabold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-                        {t('services.dataSheets')} <span className="material-symbols-outlined text-base">open_in_new</span>
-                    </button>
-                  </Link>
+                  <div className="text-primary text-base font-extrabold uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all w-fit">
+                      {t('services.dataSheets')} <span className="material-symbols-outlined text-base">open_in_new</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
