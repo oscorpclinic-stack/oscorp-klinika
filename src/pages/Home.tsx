@@ -101,11 +101,12 @@ export default function Home() {
                 {t('home.heroDesc')}
               </motion.p>
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
-                <Link to="/contact#booking-form">
-                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm md:text-base uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
+                <button 
+                  onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+                  className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm md:text-base uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20"
+                >
                   {t('home.freeConsultation')}
                 </button>
-              </Link>
                 <Link to="/innovation">
                   <button className="bg-surface/10 backdrop-blur-md border border-outline-variant/30 text-on-surface px-8 lg:px-10 py-6 rounded-full font-semibold hover:bg-surface-container-low transition-all font-label text-sm md:text-base uppercase tracking-widest leading-tight active:scale-95">
                     {t('home.ourTechnology')}

@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 
@@ -65,11 +64,12 @@ export default function LaserHub() {
                 {t('laserHub.desc')}
               </motion.p>
               <motion.div variants={itemVariants} className="flex items-center gap-6 flex-wrap">
-                <Link to="/contact">
-                  <button className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-10 py-6 rounded-full shadow-lg hover:shadow-primary/20 transition-all font-bold leading-tight active:scale-95">
-                    {t('home.freeConsultation')}
-                  </button>
-                </Link>
+                <button 
+                  onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+                  className="bg-primary text-on-primary font-label text-sm uppercase tracking-widest px-10 py-6 rounded-full shadow-lg hover:shadow-primary/20 transition-all font-bold leading-tight active:scale-95"
+                >
+                  {t('home.freeConsultation')}
+                </button>
                 <div className="flex items-center gap-3 group cursor-pointer">
                   <span className="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary transition-colors">
                     <span className="material-symbols-outlined group-hover:text-on-primary font-bold">play_arrow</span>
@@ -248,11 +248,12 @@ export default function LaserHub() {
               {t('laserHub.scheduleTitle')}
             </h2>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link to="/contact#booking-form">
-                <button className="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
-                  {t('laserHub.bookNow')}
-                </button>
-              </Link>
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+                className="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20"
+              >
+                {t('laserHub.bookNow')}
+              </button>
               <button className="border border-outline-variant text-primary px-12 py-6 rounded-full font-label tracking-widest text-sm uppercase font-bold hover:bg-surface-container-low transition-all leading-tight">
                 {t('laserHub.priceGuide')}
               </button>

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
@@ -130,9 +129,12 @@ export default function Services() {
                 <p className="text-on-tertiary-container/70 mb-10 text-lg leading-relaxed max-w-sm font-medium">
                     {t('services.orthoDesc')}
                 </p>
-                <Link className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all" to="/contact">
+                <button 
+                  onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+                  className="inline-flex items-center gap-2 border-b border-on-tertiary-container/30 pb-1 text-base font-bold uppercase tracking-widest hover:border-on-tertiary-container transition-all"
+                >
                     {t('services.viewPathway')}
-                </Link>
+                </button>
               </div>
             </motion.div>
 
@@ -216,11 +218,12 @@ export default function Services() {
           >
             <h2 className="text-4xl md:text-6xl text-primary mb-12 font-headline font-bold">{t('services.ctaTitle')}</h2>
             <div className="flex flex-col md:flex-row gap-6 justify-center">
-              <Link to="/contact#booking-form">
-                <button className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20">
-                  {t('services.requestAudit')}
-                </button>
-              </Link>
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+                className="bg-primary text-on-primary px-10 py-5 rounded-full font-headline font-bold text-sm uppercase tracking-[0.2em] hover:bg-primary/90 transition-all active:scale-95 shadow-2xl shadow-primary/20"
+              >
+                {t('services.requestAudit')}
+              </button>
             </div>
           </motion.div>
         </section>

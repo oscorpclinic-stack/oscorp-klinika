@@ -83,11 +83,12 @@ export default function Navbar() {
               <button onClick={() => changeLanguage('en')} className={`transition-colors ${i18n.language === 'en' ? 'text-primary font-bold' : 'hover:text-emerald-800'}`}>EN</button>
             </span>
             
-            <Link to="/contact#booking-form">
-              <button className="hidden sm:block gradient-button text-on-primary px-6 py-2.5 rounded-full text-sm font-label tracking-tight transition-all duration-300 scale-95 hover:opacity-90 active:scale-[0.98]">
-                {t('navbar.freeConsultation')}
-              </button>
-            </Link>
+            <button 
+              onClick={() => window.dispatchEvent(new CustomEvent('oscorp-open-popup'))}
+              className="hidden sm:block gradient-button text-on-primary px-6 py-2.5 rounded-full text-sm font-label tracking-tight transition-all duration-300 scale-95 hover:opacity-90 active:scale-[0.98]"
+            >
+              {t('navbar.freeConsultation')}
+            </button>
 
             {/* Mobile Menu Toggle Button */}
             <button 
