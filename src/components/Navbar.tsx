@@ -143,8 +143,10 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="mt-12 flex flex-col gap-10 pb-12">
-            {/* Language switcher removed as it is now in the header */}
+          <div className="mt-auto pt-12 flex gap-6 pb-12 font-label text-sm uppercase tracking-widest border-t border-outline-variant/10">
+            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Instagram</a>
+            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">LinkedIn</a>
+            <a href="#" className="text-on-surface-variant hover:text-primary transition-colors">Facebook</a>
           </div>
         </div>
       </div>
