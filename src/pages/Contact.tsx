@@ -201,18 +201,14 @@ export default function Contact() {
               </div>
             </div>
             <div className="lg:col-span-3 h-[500px] bg-surface-container-high relative">
-              <img 
-                className="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" 
-                data-alt="Map of Baku" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD29XysfoDqPLLtVTxhCdJec-tOIe3aqAzztB4GLgw9FEA5vLgAfr4xJuFGKwENzseLTpk9F5ek0GogArOZTzZ65YXrTjhfyDL4U_x7W70e0fTl0FmEwFtKXXKWyWDjqzA_Y8YUjFQN20g6uLj7qBd6njp-Nb_UyNwc6yTMzCd30phaDM69XszS5fgPJxblmelnoQQWZIh1TtUj_3RnAqJeYarMAKomDaEz9S-Z9RYTRTYBvQVZkzY-xpnR_pZMpNSkzu-tvvUVeay"
-                alt="Map Marker"
-              />
-              {/* Marker Overlay */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                <div className="w-16 h-16 bg-primary/20 rounded-full animate-pulse flex items-center justify-center">
-                  <div className="w-8 h-8 bg-primary rounded-full border-4 border-surface shadow-xl"></div>
-                </div>
-              </div>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.8031619614344!2d49.93611667588736!3d40.413211171440196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030630001d5d3d1%3A0x2d3080af42073877!2sOSCORP%20Klinika!5e0!3m2!1sen!2saz!4v1776512828652!5m2!1sen!2saz" 
+                className="w-full h-full"
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </section>
