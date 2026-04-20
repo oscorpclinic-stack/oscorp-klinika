@@ -14,9 +14,20 @@ export default function Promo() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [showScrollUp, setShowScrollUp] = useState(false);
+  const [showScrollDown, setShowScrollDown] = useState(true);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    const handleScroll = () => {
+      setShowScrollUp(window.scrollY > 400);
+      const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 500;
+      setShowScrollDown(!isAtBottom);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToForm = () => {
@@ -436,6 +447,31 @@ export default function Promo() {
             </div>
           </div>
         </section>
+
+        {/* Floating Action Buttons */}
+        <div className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-[100] flex flex-col gap-3 pointer-events-none">
+          {/* Scroll Up */}
+          <div className={`pointer-events-auto transition-all duration-300 transform ${showScrollUp ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 shadow-none pointer-events-none'}`}>
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="w-12 h-12 md:w-14 md:h-14 bg-white text-emerald-950 rounded-full shadow-2xl border border-outline-variant/20 flex items-center justify-center hover:bg-surface-variant transition-all hover:scale-110 active:scale-90"
+              aria-label="Наверх"
+            >
+              <span className="material-symbols-outlined font-black text-xl md:text-2xl">arrow_upward</span>
+            </button>
+          </div>
+          
+          {/* Scroll Down to Form */}
+          <div className={`pointer-events-auto transition-all duration-300 transform ${showScrollDown ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 shadow-none pointer-events-none absolute bottom-0 right-0 invisible'}`}>
+            <button 
+              onClick={scrollToForm}
+              className="w-12 h-12 md:w-14 md:h-14 bg-primary text-white rounded-full shadow-xl shadow-primary/30 flex items-center justify-center hover:bg-[#1a2417] transition-all hover:scale-110 active:scale-90"
+              aria-label="Вниз к форме"
+            >
+              <span className="material-symbols-outlined font-black text-xl md:text-2xl animate-bounce mt-1">arrow_downward</span>
+            </button>
+          </div>
+        </div>
 
       </main>
     </>
