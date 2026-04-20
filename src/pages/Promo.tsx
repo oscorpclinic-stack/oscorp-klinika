@@ -114,17 +114,20 @@ export default function Promo() {
               
               <div className="text-lg text-on-surface-variant space-y-6 leading-relaxed font-medium mb-10">
                 <p>
-                  <strong className="text-emerald-950">Меня зовут Ширхан Заргаров</strong> — стоматолог-хирург, имплантолог с более чем 20-летним опытом. Мой путь начался в Казани, где я окончил Казанский государственный медицинский университет. С первых лет работы я углубляю экспертизу и внедряю современные международные подходы в хирургию и эстетику.
+                  <strong className="text-emerald-950">Меня зовут Ширхан Заргаров</strong> — стоматолог-хирург, имплантолог с более чем 20-летним опытом клинической практики.
                 </p>
                 <p>
-                  Сегодня я практикую в Баку и руковожу «OSCORP Klinika» — пространством эстетической медицины, где медицинская точность сочетается с деликатным подходом к естественной красоте. В основе нашей работы — безопасность, прогнозируемость и безупречное качество.
+                  Мой профессиональный путь начался в Казани, где я окончил Казанский государственный медицинский университет. С первых лет работы я сосредоточился на хирургической стоматологии и имплантологии, последовательно углубляя экспертизу и внедряя современные международные подходы в лечение.
                 </p>
                 <p>
-                  Я специализируюсь на всем спектре хирургических вмешательств: от сложного удаления зубов до масштабных костно-пластических и имплантологических операций.
+                  Сегодня я практикую в Баку и являюсь руководителем «Oscorp Clinic» — пространства эстетической медицины, где медицинская точность сочетается с деликатным подходом к естественной красоте. В основе нашей работы — безопасность, прогнозируемость результата и безупречное качество на каждом этапе лечения.
+                </p>
+                <p>
+                  Я специализируюсь на полном спектре хирургических вмешательств: от атравматичного удаления зубов до сложных костно-пластических и имплантологических операций. В своей практике придерживаюсь принципа рационального минимализма — только необходимые вмешательства, выверенные решения и максимально щадящие методики.
                 </p>
                 <div className="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
-                  <p className="italic text-emerald-950 font-medium">
-                    «Для меня важно не просто провести лечение, а создать результат, который будет выглядеть естественно, полностью сохранять функциональность и соответствовать самым высоким эстетическим ожиданиям пациента».
+                  <p className="italic text-emerald-950 font-medium whitespace-pre-wrap">
+                    «Для меня важно не просто провести лечение, а создать результат, который будет выглядеть естественно, сохранять функциональность и соответствовать высоким эстетическим ожиданиям пациента».
                   </p>
                 </div>
               </div>
@@ -186,7 +189,54 @@ export default function Promo() {
           </div>
         </section>
 
-        {/* 4. PRICING OFFERS (LOGIC) */}
+        {/* 4. MEDICAL TOURISM (REMOVING OBJECTIONS) */}
+        <section className="py-20 bg-surface border-t border-outline-variant/10">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-12 bg-primary/5 rounded-[3rem] p-10 md:p-16 border border-primary/10">
+             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+               <div className="lg:w-1/3 text-center lg:text-left">
+                  <h2 className="text-3xl font-headline font-bold text-emerald-950 mb-4">Medical Tourism</h2>
+                  <p className="text-on-surface-variant font-medium leading-relaxed">
+                    Планируете прилететь к нам из другой страны? Мы берем на себя все организационные моменты, чтобы ваше медицинское путешествие было максимально комфортным.
+                  </p>
+               </div>
+               
+               <div className="lg:w-2/3 flex flex-col sm:flex-row items-center justify-between w-full gap-6">
+                 
+                 <div className="flex flex-col items-center text-center">
+                   <div className="w-20 h-20 rounded-2xl bg-white border border-primary/20 flex items-center justify-center text-primary mb-4 shadow-sm">
+                     <span className="material-symbols-outlined text-3xl">flight_takeoff</span>
+                   </div>
+                   <h4 className="font-bold text-emerald-950 text-sm">Покупка билетов<br/>и Трансфер</h4>
+                 </div>
+                 
+                 <div className="hidden sm:block text-outline-variant">
+                   <span className="material-symbols-outlined text-3xl">arrow_right_alt</span>
+                 </div>
+                 
+                 <div className="flex flex-col items-center text-center">
+                   <div className="w-20 h-20 rounded-2xl bg-white border border-primary/20 flex items-center justify-center text-primary mb-4 shadow-sm">
+                     <span className="material-symbols-outlined text-3xl">hotel</span>
+                   </div>
+                   <h4 className="font-bold text-emerald-950 text-sm">Размещение<br/>в отеле</h4>
+                 </div>
+
+                 <div className="hidden sm:block text-outline-variant">
+                   <span className="material-symbols-outlined text-3xl">arrow_right_alt</span>
+                 </div>
+                 
+                 <div className="flex flex-col items-center text-center">
+                   <div className="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center mb-4 shadow-xl">
+                     <span className="material-symbols-outlined text-3xl">medical_services</span>
+                   </div>
+                   <h4 className="font-bold text-emerald-950 text-sm">Лечение<br/>и Восстановление</h4>
+                 </div>
+                 
+               </div>
+             </div>
+          </div>
+        </section>
+
+        {/* 5. PRICING OFFERS (LOGIC) */}
         <section className="py-24 bg-surface-container-lowest border-t border-outline-variant/10">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
             <div className="text-center mb-16">
@@ -251,62 +301,15 @@ export default function Promo() {
           </div>
         </section>
 
-        {/* 5. MEDICAL TOURISM (REMOVING OBJECTIONS) */}
-        <section className="py-20 bg-surface">
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-12 bg-primary/5 rounded-[3rem] p-10 md:p-16 border border-primary/10">
-             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-               <div className="lg:w-1/3 text-center lg:text-left">
-                  <h2 className="text-3xl font-headline font-bold text-emerald-950 mb-4">Medical Tourism</h2>
-                  <p className="text-on-surface-variant font-medium leading-relaxed">
-                    Планируете прилететь к нам из другой страны? Мы берем на себя все организационные моменты, чтобы ваше медицинское путешествие было максимально комфортным.
-                  </p>
-               </div>
-               
-               <div className="lg:w-2/3 flex flex-col sm:flex-row items-center justify-between w-full gap-6">
-                 
-                 <div className="flex flex-col items-center text-center">
-                   <div className="w-20 h-20 rounded-2xl bg-white border border-primary/20 flex items-center justify-center text-primary mb-4 shadow-sm">
-                     <span className="material-symbols-outlined text-3xl">flight_takeoff</span>
-                   </div>
-                   <h4 className="font-bold text-emerald-950 text-sm">Покупка билетов<br/>и Трансфер</h4>
-                 </div>
-                 
-                 <div className="hidden sm:block text-outline-variant">
-                   <span className="material-symbols-outlined text-3xl">arrow_right_alt</span>
-                 </div>
-                 
-                 <div className="flex flex-col items-center text-center">
-                   <div className="w-20 h-20 rounded-2xl bg-white border border-primary/20 flex items-center justify-center text-primary mb-4 shadow-sm">
-                     <span className="material-symbols-outlined text-3xl">hotel</span>
-                   </div>
-                   <h4 className="font-bold text-emerald-950 text-sm">Размещение<br/>в отеле</h4>
-                 </div>
-
-                 <div className="hidden sm:block text-outline-variant">
-                   <span className="material-symbols-outlined text-3xl">arrow_right_alt</span>
-                 </div>
-                 
-                 <div className="flex flex-col items-center text-center">
-                   <div className="w-20 h-20 rounded-2xl bg-primary text-white flex items-center justify-center mb-4 shadow-xl">
-                     <span className="material-symbols-outlined text-3xl">medical_services</span>
-                   </div>
-                   <h4 className="font-bold text-emerald-950 text-sm">Лечение<br/>и Восстановление</h4>
-                 </div>
-                 
-               </div>
-             </div>
-          </div>
-        </section>
-
         {/* 6. LEAD FORM (ACTION) */}
         <section className="py-24 bg-surface-container-lowest" id="lead-form">
-          <div className="max-w-4xl mx-auto px-6 lg:px-12">
-            <div className="bg-surface rounded-[2rem] p-8 md:p-16 shadow-2xl border border-outline-variant/20 relative overflow-hidden">
+          <div className="max-w-6xl mx-auto px-6 lg:px-12">
+            <div className="bg-surface rounded-[2rem] p-8 lg:p-16 shadow-2xl border border-outline-variant/20 relative overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-0 pointer-events-none"></div>
               <div className="absolute bottom-0 left-0 w-40 h-40 bg-tertiary/5 rounded-full blur-2xl -z-0 pointer-events-none"></div>
               
-              <div className="text-center relative z-10 mb-12">
+              <div className="text-center relative z-10 mb-10 lg:mb-14">
                 <span className="material-symbols-outlined text-primary text-4xl mb-4">forum</span>
                 <h2 className="text-3xl md:text-5xl font-headline font-bold text-emerald-950 mb-4 tracking-tight">Сделайте шаг к новой улыбке</h2>
                 <p className="text-lg text-on-surface-variant font-medium">
@@ -334,7 +337,7 @@ export default function Promo() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-bold font-headline uppercase tracking-widest text-primary ml-1">Фамилия Имя Отчество *</label>
                       <input 
@@ -353,9 +356,6 @@ export default function Promo() {
                         onChange={setPhone}
                       />
                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 gap-6">
                     <div className="space-y-2">
                       <label className="text-xs font-bold font-headline uppercase tracking-widest text-primary ml-1">Что вас интересует? *</label>
                       <CustomSelect 
