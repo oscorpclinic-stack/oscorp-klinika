@@ -11,6 +11,7 @@ import ServiceImplants from './pages/ServiceImplants';
 import ServiceAesthetics from './pages/ServiceAesthetics';
 import ServiceOrthodontics from './pages/ServiceOrthodontics';
 import ServiceDiagnostics from './pages/ServiceDiagnostics';
+import Promo from './pages/Promo';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="innovation" element={<Innovation />} />
           <Route path="contact" element={<Contact />} />
         </Route>
+        <Route path="/promo" element={<Promo />} />
       </Routes>
     </BrowserRouter>
   );

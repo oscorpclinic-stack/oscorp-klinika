@@ -52,7 +52,8 @@ interface PhoneInputProps {
 
 export default function PhoneInput({ value, onChange, className = "", required, compact }: PhoneInputProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState<Country>(countries[0]);
+  const defaultCountry = countries.find(c => c.code === 'ru') || countries[0];
+  const [selected, setSelected] = useState<Country>(defaultCountry);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const getLocalNumber = () => {
