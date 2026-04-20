@@ -4,10 +4,7 @@ import SEO from '../components/SEO';
 import CustomSelect from '../components/CustomSelect';
 import PhoneInput from '../components/PhoneInput';
 import { supabase } from '../lib/supabase';
-import { useTranslation } from 'react-i18next';
-
 export default function Promo() {
-  const { t } = useTranslation();
   
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -92,7 +89,7 @@ export default function Promo() {
           {/* Decorative Background */}
           <div className="absolute top-0 right-0 w-full h-full md:w-1/2 bg-primary/5 rounded-bl-[100%] blur-3xl -z-0 pointer-events-none"></div>
 
-          <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+          <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start relative z-10">
             
             <div className="lg:col-span-5 relative">
               <div className="absolute -inset-4 bg-primary/5 rounded-[2rem] transform -rotate-3 z-0"></div>
