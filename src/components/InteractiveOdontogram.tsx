@@ -17,7 +17,7 @@ export default function InteractiveOdontogram({ selectedTeeth, onToggleTooth }: 
   
   const getToothClasses = (id: string, type: string, isUpper: boolean) => {
     const isSelected = selectedTeeth.includes(id);
-    let base = "relative flex items-center justify-center cursor-pointer transition-all duration-300 overflow-hidden border ";
+    let base = "relative flex items-center justify-center cursor-pointer transition-all duration-300 overflow-hidden border backdrop-blur-md ";
     
     // Shape logic
     if (type === 'molar') base += "w-8 h-12 sm:w-10 sm:h-14 rounded-md ";
@@ -25,11 +25,11 @@ export default function InteractiveOdontogram({ selectedTeeth, onToggleTooth }: 
     if (type === 'canine') base += "w-6 h-10 sm:w-7 sm:h-12 rounded-full ";
     if (type === 'incisor') base += "w-6 h-10 sm:w-7 sm:h-12 " + (isUpper ? "rounded-b-full rounded-t-sm" : "rounded-t-full rounded-b-sm") + " ";
 
-    // Color logic
+    // Color logic (Glassy HUD style matching OSCORP)
     if (isSelected) {
-      base += "bg-cyan-400 border-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.6)] scale-110 z-10 text-emerald-950 font-bold";
+      base += "bg-primary/90 border-primary shadow-[0_0_20px_rgba(76,107,34,0.5)] scale-110 z-10 text-white font-bold";
     } else {
-      base += "bg-[#1e3a8a]/40 border-cyan-300/30 hover:border-cyan-400 hover:bg-[#1e3a8a]/80 text-cyan-100 hover:scale-105 backdrop-blur-sm";
+      base += "bg-white/40 border-white/50 hover:border-primary hover:bg-white/70 text-emerald-950/80 font-medium hover:text-emerald-950 hover:scale-105";
     }
     
     return base;
@@ -40,15 +40,14 @@ export default function InteractiveOdontogram({ selectedTeeth, onToggleTooth }: 
       
       {/* Upper Jaw */}
       <div className="mb-4 text-center w-full relative">
-        <h3 className="text-cyan-200/50 text-xs font-bold tracking-[0.3em] uppercase mb-8">Upper Jaw</h3>
+        <h3 className="text-emerald-950/30 text-[10px] font-bold tracking-[0.4em] uppercase mb-10 pointer-events-none">Upper Jaw</h3>
         
-        {/* Curving arch container via flex and transforms */}
+        {/* Curving arch container */}
         <div className="flex justify-center items-end gap-1 sm:gap-2 h-32 relative px-4">
           {upperTeeth.map((tooth, idx) => {
-             // Create an arc effect by translating Y based on distance from center
              const distFromCenter = Math.abs(idx - 7.5);
              const translateY = Math.pow(distFromCenter, 1.8) * 2.5; 
-             const rotate = (idx - 7.5) * 5; // Slight rotation
+             const rotate = (idx - 7.5) * 5;
 
              return (
                <div 
@@ -65,7 +64,7 @@ export default function InteractiveOdontogram({ selectedTeeth, onToggleTooth }: 
         </div>
       </div>
 
-      <div className="h-px w-3/4 bg-cyan-500/20 my-12 relative shadow-[0_0_10px_rgba(6,182,212,0.3)]"></div>
+      <div className="h-[2px] w-1/4 bg-primary/20 my-16 relative rounded-full"></div>
 
       {/* Lower Jaw */}
       <div className="mt-4 text-center w-full relative">
@@ -88,7 +87,7 @@ export default function InteractiveOdontogram({ selectedTeeth, onToggleTooth }: 
              )
           })}
         </div>
-        <h3 className="text-cyan-200/50 text-xs font-bold tracking-[0.3em] uppercase mt-8 pointer-events-none">Lower Jaw</h3>
+        <h3 className="text-emerald-950/30 text-[10px] font-bold tracking-[0.4em] uppercase mt-10 pointer-events-none">Lower Jaw</h3>
       </div>
 
     </div>
