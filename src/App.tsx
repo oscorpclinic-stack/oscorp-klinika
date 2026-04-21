@@ -12,6 +12,7 @@ import ServiceAesthetics from './pages/ServiceAesthetics';
 import ServiceOrthodontics from './pages/ServiceOrthodontics';
 import ServiceDiagnostics from './pages/ServiceDiagnostics';
 import Promo from './pages/Promo';
+import Calculator from './pages/Calculator';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
         <Route path="/promo" element={<Promo />} />
+        <Route path="/calculator" element={<Calculator />} />
       </Routes>
     </BrowserRouter>
   );
