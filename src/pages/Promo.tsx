@@ -76,7 +76,7 @@ export default function Promo() {
   const beforeAfterData = [
     { type: "Эстетическая реставрация", desc: "Премиальные керамические виниры", before: "/6002405646332005597.jpg", after: "/6000257995180281018.jpg", rotate: false },
     { type: "Голливудская Улыбка", desc: "Прецизионная установка виниров", before: "/6002548230656298160.jpg", after: "/6000206906544295119.jpg", rotate: true },
-    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: null, after: null, rotate: false },
+    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: "/westdent-before-after-all-on-4-6_result-2.jpg", after: "/westdent-before-after-all-on-4-6_result-1.jpg", rotate: false },
     { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики", before: null, after: null, rotate: false }
   ];
 
