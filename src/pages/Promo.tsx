@@ -178,7 +178,9 @@ export default function Promo() {
                           <img 
                             src={item.before} 
                             alt={`${item.type} — До`} 
-                            className={`w-full object-cover transition-transform duration-500 ${item.rotate ? 'rotate-90 scale-150 h-full' : 'h-full'} ${item.isSplit ? 'h-[200%] object-top' : ''}`} 
+                            className={`w-full object-cover transition-transform duration-500 
+                              ${item.isSplit ? 'h-[200%] object-top' : 'h-full'} 
+                              ${item.rotate ? 'rotate-90 scale-150' : ''}`} 
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center">
@@ -192,7 +194,9 @@ export default function Promo() {
                           <img 
                             src={item.after} 
                             alt={`${item.type} — После`} 
-                            className={`w-full object-cover transition-transform duration-500 ${item.rotate ? 'rotate-90 scale-150 h-full' : 'h-full'} ${item.isSplit ? 'h-[200%] object-bottom' : ''}`} 
+                            className={`w-full object-cover transition-transform duration-500 
+                              ${item.isSplit ? 'h-[200%] object-bottom' : 'h-full'} 
+                              ${item.rotate ? 'rotate-90 scale-150' : ''}`} 
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center">
