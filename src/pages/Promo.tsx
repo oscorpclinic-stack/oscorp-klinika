@@ -74,10 +74,10 @@ export default function Promo() {
   };
 
   const beforeAfterData = [
-    { type: "Эстетическая реставрация", desc: "Премиальные керамические виниры", before: "/6002405646332005597.jpg", after: "/6000257995180281018.jpg" },
-    { type: "Голливудская Улыбка", desc: "Прецизионная установка виниров", before: "/6002548230656298160.jpg", after: "/6000206906544295119.jpg" },
-    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: null, after: null },
-    { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики", before: null, after: null }
+    { type: "Эстетическая реставрация", desc: "Премиальные керамические виниры", before: "/6002405646332005597.jpg", after: "/6000257995180281018.jpg", rotate: false },
+    { type: "Голливудская Улыбка", desc: "Прецизионная установка виниров", before: "/6002548230656298160.jpg", after: "/6000206906544295119.jpg", rotate: true },
+    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: null, after: null, rotate: false },
+    { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики", before: null, after: null, rotate: false }
   ];
 
   return (
@@ -175,7 +175,11 @@ export default function Promo() {
                   <div className="flex w-full overflow-hidden rounded-xl bg-surface-container-highest h-48 mb-5 relative group border border-outline-variant/20">
                     <div className="w-1/2 h-full border-r-2 border-white/50 relative bg-surface-dim overflow-hidden">
                         {item.before ? (
-                          <img src={item.before} alt={`${item.type} — До`} className="w-full h-full object-cover" />
+                          <img 
+                            src={item.before} 
+                            alt={`${item.type} — До`} 
+                            className={`w-full h-full object-cover transition-transform duration-500 ${item.rotate ? 'rotate-90 scale-150' : ''}`} 
+                          />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center">
                             <span className="material-symbols-outlined text-4xl opacity-20">face_retouching_off</span>
@@ -185,7 +189,11 @@ export default function Promo() {
                     </div>
                     <div className="w-1/2 h-full relative bg-[#d4e8cc] overflow-hidden">
                         {item.after ? (
-                          <img src={item.after} alt={`${item.type} — После`} className="w-full h-full object-cover" />
+                          <img 
+                            src={item.after} 
+                            alt={`${item.type} — После`} 
+                            className={`w-full h-full object-cover transition-transform duration-500 ${item.rotate ? 'rotate-90 scale-150' : ''}`} 
+                          />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center">
                             <span className="material-symbols-outlined text-4xl text-primary opacity-20">face_retouching_natural</span>
