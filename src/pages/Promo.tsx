@@ -75,7 +75,7 @@ export default function Promo() {
 
   const beforeAfterData = [
     { type: "Эстетическая реставрация", desc: "Премиальные керамические виниры", before: "/6002405646332005597.jpg", after: "/6000257995180281018.jpg" },
-    { type: "Голливудская Улыбка", desc: "Полное преображение зоны улыбки", before: null, after: null },
+    { type: "Голливудская Улыбка", desc: "Прецизионная установка виниров", before: "/6002548230656298160.jpg", after: "/6000206906544295119.jpg" },
     { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: null, after: null },
     { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики", before: null, after: null }
   ];
