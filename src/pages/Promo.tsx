@@ -74,10 +74,10 @@ export default function Promo() {
   };
 
   const beforeAfterData = [
-    { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики" },
-    { type: "Голливудская Улыбка", desc: "Премиальные керамические виниры" },
-    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6" },
-    { type: "Эстетическая реставрация", desc: "Минимально инвазивный подход" }
+    { type: "Эстетическая реставрация", desc: "Премиальные керамические виниры", before: "/6002405646332005597.jpg", after: "/6000257995180281018.jpg" },
+    { type: "Голливудская Улыбка", desc: "Полное преображение зоны улыбки", before: null, after: null },
+    { type: "Комплексная имплантация", desc: "Система All-on-4 / All-on-6", before: null, after: null },
+    { type: "Полное протезирование", desc: "Восстановление функциональности и эстетики", before: null, after: null }
   ];
 
   return (
@@ -172,17 +172,25 @@ export default function Promo() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {beforeAfterData.map((item, i) => (
                 <div key={i} className="flex flex-col items-center bg-surface-container-low rounded-2xl p-4 shadow-sm border border-outline-variant/10">
-                  <div className="flex w-full overflow-hidden rounded-xl bg-surface-container-highest h-40 mb-5 relative group border border-outline-variant/20">
-                    <div className="w-1/2 h-full border-r-2 border-white/50 relative bg-surface-dim">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="material-symbols-outlined text-4xl opacity-20">face_retouching_off</span>
-                        </div>
+                  <div className="flex w-full overflow-hidden rounded-xl bg-surface-container-highest h-48 mb-5 relative group border border-outline-variant/20">
+                    <div className="w-1/2 h-full border-r-2 border-white/50 relative bg-surface-dim overflow-hidden">
+                        {item.before ? (
+                          <img src={item.before} alt={`${item.type} — До`} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="material-symbols-outlined text-4xl opacity-20">face_retouching_off</span>
+                          </div>
+                        )}
                         <div className="absolute top-2 left-2 bg-black/60 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">До</div>
                     </div>
-                    <div className="w-1/2 h-full relative bg-[#d4e8cc]">
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <span className="material-symbols-outlined text-4xl text-primary opacity-20">face_retouching_natural</span>
-                        </div>
+                    <div className="w-1/2 h-full relative bg-[#d4e8cc] overflow-hidden">
+                        {item.after ? (
+                          <img src={item.after} alt={`${item.type} — После`} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="material-symbols-outlined text-4xl text-primary opacity-20">face_retouching_natural</span>
+                          </div>
+                        )}
                         <div className="absolute top-2 right-2 bg-primary/90 backdrop-blur text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">После</div>
                     </div>
                   </div>
